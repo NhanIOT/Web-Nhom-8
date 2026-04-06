@@ -1,0 +1,719 @@
+/* ============================================================
+   BOOKGROUP8 — RESPONSIVE.CSS
+   Breakpoints:
+     - Desktop    : > 1024px  (mặc định, không cần media query)
+     - Tablet      : ≤ 1024px
+     - Mobile L    : ≤ 768px
+     - Mobile M    : ≤ 600px
+     - Mobile S    : ≤ 400px
+   ============================================================ */
+
+/* ══════════════════════════════════════════════════════════
+   TABLET  ≤ 1024px
+══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* ── STICKY / BANNER ── */
+  .container__banner--text {
+    font-size: 12.5px;
+  }
+
+  /* ── HEADER ── */
+  .container__header {
+    padding: 10px 20px;
+    gap: 16px;
+  }
+
+  .container__header--search input {
+    width: 320px;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .container {
+    padding: 0 12px;
+  }
+
+  /* ── HERO ── */
+  .container__main {
+    gap: 10px;
+  }
+
+  /* ── GIFT CARD: 4 → 2 cột ── */
+  .giftcard__content--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── XU HƯỚNG: 6 → 4 cột ── */
+  .prod-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ── GỢI Ý: 6 → 4 cột ── */
+  .goiy-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ── RANKING ── */
+  .ranking-layout {
+    grid-template-columns: 1fr 200px;
+  }
+
+  .rank-featured-thumb {
+    width: 120px;
+    height: 160px;
+  }
+
+  /* ── FOOTER ── */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-input {
+    max-width: 320px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE L  ≤ 768px
+══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* ── BANNER ── */
+  .container__banner {
+    gap: 10px;
+    padding: 8px 14px;
+  }
+
+  .container__banner--text {
+    font-size: 11.5px;
+    letter-spacing: 0;
+  }
+
+  .container__banner--btn {
+    font-size: 11px;
+    padding: 5px 12px;
+    flex-shrink: 0;
+  }
+
+  /* ── HEADER ── */
+  .container__header {
+    padding: 8px 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* Logo nhỏ lại */
+  .container__header--logo img {
+    height: 38px;
+  }
+
+  /* Search xuống hàng 2, chiếm full width */
+  .container__header--search {
+    order: 4;
+    flex: 1 1 100%;
+  }
+
+  .container__header--search input {
+    width: 100%;
+    flex: 1;
+  }
+
+  /* Ẩn nav danh mục (dùng hamburger menu sau) */
+  .container__header--danh-muc {
+    display: none;
+  }
+
+  /* Icon nav: ẩn chữ, chỉ giữ icon */
+  .container__header--quan-trong ul li a {
+    display: none;
+  }
+
+  .container__header--quan-trong ul {
+    gap: 14px;
+  }
+
+  .container__header--quan-trong ul li img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* ── HERO GRID ── */
+  .container__main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "cards"
+      "theloai";
+  }
+
+  .container__main--left {
+    grid-area: left;
+  }
+  .container__main--right {
+    grid-area: right;
+  }
+  .container__main--cards {
+    grid-area: cards;
+  }
+  .container__main--theloai {
+    grid-area: theloai;
+  }
+
+  /* Banner phụ nằm ngang */
+  .container__main--right {
+    flex-direction: row;
+  }
+
+  .main__right--banner {
+    min-height: 100px;
+  }
+
+  /* Carousel thấp hơn */
+  .main__left--img {
+    height: 220px;
+  }
+
+  /* Category 4 → 2 cột */
+  .container__main--cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cat-card {
+    height: 110px;
+  }
+
+  /* Icon thể loại: wrap 5/hàng */
+  .container__main--theloai {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 12px 14px;
+  }
+
+  .main__theloai--element {
+    flex: 0 0 calc(20% - 8px);
+  }
+
+  /* ── DANH MỤC SẢN PHẨM ── */
+  .sanpham__grid--item {
+    flex: 0 0 78px;
+  }
+
+  .sanpham__grid--img {
+    width: 62px;
+    height: 78px;
+  }
+
+  /* ── FLASH SALE ── */
+  .flash-sale__header {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .flash-sale__product--element {
+    flex: 0 0 140px;
+    min-width: 140px;
+  }
+
+  .flash-sale__product--element > img {
+    height: 165px;
+  }
+
+  .product__sale {
+    top: 135px;
+  }
+
+  /* ── GIFT CARD ── */
+  .giftcard__content--grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  /* ── XU HƯỚNG: 4 → 3 cột ── */
+  .prod-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  /* ── ROW CUỘN NGANG ── */
+  .prod-row .prod-card {
+    flex: 0 0 138px;
+    min-width: 138px;
+  }
+
+  /* ── GỢI Ý: 4 → 3 cột ── */
+  .goiy-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .goiy-wrap {
+    padding: 12px 12px 0;
+    background: linear-gradient(
+      180deg,
+      #d0021b 0px,
+      #d0021b 180px,
+      #f0f0f0 180px
+    );
+  }
+
+  /* ── RANKING ── */
+  .ranking-layout {
+    grid-template-columns: 1fr;
+    padding: 10px 12px 6px;
+  }
+
+  .ranking-list-col {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 12px;
+  }
+
+  .ranking-featured {
+    padding-left: 0;
+    padding-top: 14px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .rank-featured-thumb {
+    width: 100px;
+    height: 135px;
+  }
+
+  /* ── TABS ── */
+  .tabs {
+    padding: 0 10px;
+  }
+
+  .tab {
+    padding: 8px 11px;
+    font-size: 12px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+
+  .newsletter-input {
+    flex: 1 1 180px;
+    max-width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE M  ≤ 600px
+══════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  /* ── BANNER ── */
+  .container__banner {
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  .container__banner--text {
+    font-size: 11px;
+  }
+
+  /* ── HEADER ── */
+  .container__header {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .container__header--logo img {
+    height: 32px;
+  }
+
+  /* Ẩn tài khoản, chỉ giữ chuông + giỏ hàng */
+  .container__header--quan-trong ul li:nth-child(3) {
+    display: none;
+  }
+
+  .container__header--countries select {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  /* ── HERO ── */
+  .main__left--img {
+    height: 185px;
+  }
+
+  .carousel-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+  }
+
+  .dot {
+    width: 14px;
+    height: 5px;
+  }
+  .dot.active {
+    width: 20px;
+  }
+
+  .main__right--banner {
+    min-height: 82px;
+  }
+
+  /* Category 4 cột → 2 cột (giữ) */
+  .cat-card {
+    height: 88px;
+    border-radius: 8px;
+  }
+
+  /* Icon thể loại: 4/hàng */
+  .main__theloai--element {
+    flex: 0 0 calc(25% - 8px);
+  }
+
+  .main__theloai--element img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .main__theloai--element span {
+    font-size: 10.5px;
+  }
+
+  /* ── DANH MỤC SẢN PHẨM ── */
+  .header__sec-title,
+  .sec-title {
+    font-size: 13.5px;
+  }
+
+  .sanpham__grid--item {
+    flex: 0 0 70px;
+  }
+
+  .sanpham__grid--img {
+    width: 54px;
+    height: 66px;
+    border-radius: 7px;
+  }
+
+  .sanpham__grid--item span {
+    font-size: 10px;
+  }
+
+  /* ── FLASH SALE ── */
+  .flash-sale__header h2 {
+    font-size: 13px;
+    padding: 4px 9px;
+  }
+
+  .time-block {
+    font-size: 12px;
+    min-width: 24px;
+    height: 24px;
+  }
+
+  .flash-sale__product--element {
+    flex: 0 0 128px;
+    min-width: 128px;
+  }
+
+  .flash-sale__product--element > img {
+    height: 148px;
+  }
+
+  .product__sale {
+    top: 118px;
+  }
+
+  .sale__percent {
+    font-size: 11px;
+  }
+
+  .product__name {
+    font-size: 11.5px;
+    padding: 6px 6px 2px;
+  }
+
+  .product__price {
+    font-size: 12.5px;
+    padding: 2px 6px 8px;
+  }
+
+  /* ── GIFT CARD ── */
+  .giftcard__content--grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .giftcard__name {
+    font-size: 11.5px;
+  }
+
+  .giftcard__price {
+    font-size: 13px;
+  }
+
+  /* ── XU HƯỚNG: 3 cột ── */
+  .prod-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    padding: 10px;
+  }
+
+  /* ── PROD CARD ── */
+  .prod-card {
+    border-radius: 7px;
+  }
+
+  .prod-name {
+    font-size: 11.5px;
+  }
+
+  .prod-price {
+    font-size: 12.5px;
+  }
+
+  /* Row cuộn */
+  .prod-row .prod-card {
+    flex: 0 0 125px;
+    min-width: 125px;
+  }
+
+  .row-wrap {
+    padding: 10px;
+  }
+
+  /* ── BẢNG XẾP HẠNG ── */
+  .rank-num {
+    font-size: 17px;
+    min-width: 22px;
+  }
+
+  .rank-thumb {
+    width: 40px;
+    height: 52px;
+  }
+
+  .rank-name {
+    font-size: 12px;
+  }
+
+  .rank-tag {
+    font-size: 10.5px;
+  }
+
+  /* ── GỢI Ý: 3 cột ── */
+  .goiy-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .goiy-title {
+    font-size: 14px;
+  }
+
+  .goiy-wrap {
+    padding: 10px 10px 0;
+    background: linear-gradient(
+      180deg,
+      #d0021b 0px,
+      #d0021b 155px,
+      #f0f0f0 155px
+    );
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .newsletter-icon {
+    display: none;
+  }
+
+  .newsletter-label {
+    text-align: center;
+    font-size: 12.5px;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+    height: 40px;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 22px 0 14px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .footer-col-title {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+  }
+
+  .footer-desc {
+    font-size: 12px;
+  }
+
+  .footer-logo-text {
+    font-size: 17px;
+  }
+
+  .footer-copy {
+    font-size: 11.5px;
+  }
+
+  /* ── SHARED ── */
+  .sec-head {
+    padding: 10px 12px;
+  }
+
+  .btn-more {
+    padding: 7px 28px;
+    font-size: 12.5px;
+  }
+
+  .btn-more-wrap {
+    padding: 8px 0 12px;
+  }
+
+  .arrow-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    right: -10px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE S  ≤ 400px
+══════════════════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  /* ── HERO ── */
+  .main__left--img {
+    height: 155px;
+  }
+
+  .main__right--banner {
+    min-height: 68px;
+  }
+
+  .cat-card {
+    height: 72px;
+  }
+
+  /* Icon thể loại: 5/hàng nhỏ */
+  .main__theloai--element {
+    flex: 0 0 calc(20% - 6px);
+  }
+
+  .main__theloai--element img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main__theloai--element span {
+    font-size: 9.5px;
+  }
+
+  /* ── DANH MỤC ── */
+  .sanpham__grid--item {
+    flex: 0 0 64px;
+  }
+
+  .sanpham__grid--img {
+    width: 48px;
+    height: 60px;
+  }
+
+  /* ── XU HƯỚNG: 2 cột ── */
+  .prod-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ── GỢI Ý: 2 cột ── */
+  .goiy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .goiy-wrap {
+    background: linear-gradient(
+      180deg,
+      #d0021b 0px,
+      #d0021b 130px,
+      #f0f0f0 130px
+    );
+  }
+
+  /* ── GIFT CARD: 1 cột ── */
+  .giftcard__content--grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── FOOTER: 1 cột ── */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ── BANNER ── */
+  .container__banner--text {
+    font-size: 10px;
+  }
+
+  /* ── HEADER ── */
+  .container__header--logo img {
+    height: 28px;
+  }
+
+  /* Ẩn cả tài khoản, chỉ giỏ hàng + chuông */
+  .container__header--quan-trong ul li:nth-child(3) {
+    display: none;
+  }
+}

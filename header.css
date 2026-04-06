@@ -1,0 +1,205 @@
+/* ── STICKY WRAPPER ── */
+.container__sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ── BANNER ── */
+.container__banner {
+  background-color: #d0021b;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.04) 0px,
+    rgba(255, 255, 255, 0.04) 2px,
+    transparent 2px,
+    transparent 10px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 8px 20px;
+}
+
+.container__banner--text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.container__banner--btn {
+  background: #fff;
+  color: #d0021b;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 6px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.container__banner--btn:hover {
+  background: #ffe0e0;
+}
+
+/* ── HEADER ── */
+.container__header {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: var(--foreground-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 24px;
+}
+
+/* Logo */
+.container__header--logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* ── NAV DANH MỤC ── */
+.container__header--danh-muc ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container__header--danh-muc ul li a {
+  text-decoration: none;
+  color: var(--gray-800);
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.container__header--danh-muc ul li a:hover {
+  color: var(--p-700);
+  text-decoration: underline;
+}
+
+/* ── SEARCH ── */
+.container__header--search {
+  display: flex;
+  align-items: center;
+  flex: 1; /* chiếm hết khoảng trống còn lại */
+  min-width: 0;
+}
+
+.container__header--search input {
+  flex: 1;
+  padding: 0 16px;
+  border: none;
+  border-radius: 20px 0 0 20px; /* bo tròn bên trái, phẳng bên phải */
+  font-size: 0.85rem;
+  height: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  outline: none;
+  min-width: 0;
+}
+
+.container__header--search button {
+  background-color: var(--p-600, #d0021b);
+  border: none;
+  border-radius: 0 20px 20px 0; /* bo tròn bên phải */
+  width: 44px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s;
+}
+
+.container__header--search button img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.container__header--search button:hover {
+  transform: scale(1.05);
+}
+
+/* ── NAV QUAN TRỌNG (thông báo / giỏ hàng / tài khoản) ── */
+.container__header--quan-trong ul {
+  display: flex;
+  gap: 20px; /* khoảng cách giữa 3 item */
+  list-style: none; /* ← thiếu cái này là bị lỗi */
+  padding: 0;
+  margin: 0;
+}
+
+.container__header--quan-trong ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* icon cách text 4px (không phải 10px) */
+  cursor: pointer;
+}
+
+.container__header--quan-trong ul li img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.container__header--quan-trong ul li a {
+  text-decoration: none;
+  color: var(--gray-800);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.container__header--quan-trong ul li a:hover {
+  color: var(--p-700);
+  text-decoration: underline;
+}
+
+/* ── LANGUAGE SELECT ── */
+.container__header--countries {
+  flex-shrink: 0;
+}
+
+.container__header--countries select {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background: #fff;
+  outline: none;
+}
+
+.container__header--countries select:hover {
+  border-color: #bbb;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .container__header {
+    padding: 10px 16px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .container__header--search {
+    order: 4;
+    flex: 1 1 100%;
+  }
+
+  .container__header--danh-muc {
+    display: none;
+  } /* ẩn nav trên mobile */
+}
