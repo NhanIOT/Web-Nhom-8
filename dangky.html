@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký - BookGroup8</title>
+    <link rel="stylesheet" href="CSS/themes.css" />
+    <link rel="stylesheet" href="CSS/dangky.css" />
+    <link rel="stylesheet" href="CSS/default.css" />
+    <script src="JAVASCRIPT/dangky.js"></script>
+  </head>
+  <body>
+    <div class="container__signin">
+      <div class="container__signin--left">
+        <a href="index.html" class="signin__left--logo">
+          <div class="logo-icon">
+            <img src="asset/icon/login/logo.svg" alt="logo web" />
+          </div>
+          <span class="logo-text">BookGroup8</span>
+        </a>
+
+        <a href="index.html" class="signin__left--back"> Quay về trang chủ </a>
+        <h1>Tạo tài khoản</h1>
+        <p>Đã có tài khoản? <a href="dangnhap.html">Đăng nhập ngay</a></p>
+
+        <form class="signin__left" onsubmit="return false;">
+          <div class="signin__left--name">
+            <div class="left__name--lastname">
+              <label for="lastname">Họ</label>
+              <div class="left__input--icon input__icon--last">
+                <img src="asset/icon/signin/name.svg" alt="icon name" />
+              </div>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Nguyễn"
+                required
+              />
+            </div>
+            <div class="left__name--firstname">
+              <label for="firstname">Tên</label>
+              <div class="left__input--icon input__icon--first">
+                <img src="asset/icon/signin/name.svg" alt="icon name" />
+              </div>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Thiện Nhân"
+                required
+              />
+            </div>
+          </div>
+          <div class="signin__left--email">
+            <label for="email">Email</label>
+            <div class="left__input--icon input__icon--email">
+              <img src="asset/icon/signin/email.svg" alt="icon email" />
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="thiennhann0006@gmail.com"
+              required
+            />
+          </div>
+          <div class="signin__left--password">
+            <label for="password">Mật khẩu</label>
+            <div class="left__input--icon input__icon--password">
+              <img src="asset/icon/signin/password.svg" alt="icon password" />
+            </div>
+            <div class="left__input--icon input__icon--showpass">
+              <img src="asset/icon/signin/show_password.svg" alt="icon show password"/>
+            </div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Tối thiểu 8 ký tự"
+              required
+            />
+          </div>
+          <div class="signin__left--confirm-password">
+            <label for="confirm-password">Xác nhận mật khẩu</label>
+            <div class="left__input--icon input__icon--cfpassword">
+              <img src="asset/icon/signin/conform_password.svg" alt="icon conform password" />
+            </div>
+            <div class="left__input--icon input__icon--showcfpass">
+              <img src="asset/icon/signin/show_password.svg" alt="icon show password"/>
+            </div>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              placeholder="Nhập lại mật khẩu"
+              required
+            />
+          </div>
+          <div class="signin__left--check">
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree"
+              >Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và
+              <a href="#">Chính sách bảo mật</a> của BookGroup8</label
+            >
+          </div>
+          <button class="signin__left--finalbtn" type="submit">Tạo tài khoản</button>
+          <div class="signin__left--hr">
+            <p>Hoặc đăng ký bằng</p>
+          </div>
+
+          <div class="signin__left--btn">
+            <button class="left__btn" type="button">
+              <div class="left__btn--logo">
+                <img src="asset/icon/login/google.svg" alt="logo google" />
+              </div>
+              <span class="left__btn--name">Google</span>
+            </button>
+            <button class="left__btn" type="button">
+              <div class="left__btn--logo">
+                <img src="asset/icon/login/facebook.svg" alt="logo facebook" />
+              </div>
+              <span class="left__btn--name">Facebook</span>
+            </button>
+          </div>
+        </div>
+        </form>
+
+        
+
+      <div class="container__signin--right">
+        <div class="signin__right--img">
+          <img src="asset/icon/signin/anh_nen.png" alt="ảnh nền signin" />
+        </div>
+
+        <div class="signin__right--text">
+          <h1>Hành trình<br />Tri thức<br />Bắt đầu</h1>
+          <p>
+            Tham gia cùng hàng nghìn độc giả đang khám phá, 
+            học hỏi và phát triển mỗi ngày qua những trang sách được chọn lọc kỹ lưỡng.
+          </p>
+          <div class="signin__right--stats">
+            <div class="stat-item">
+              <h1>1000+</h1>
+              <h3>Đầu sách</h3>
+            </div>
+            <div class="stat-item">
+              <h1>4</h1>
+              <h3>Độc giả</h3>
+            </div>
+            <div class="stat-item">
+              <h1>5 <img src="asset/icon/login/star.svg" alt="sao" /></h1>
+              <h3>Đánh giá</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

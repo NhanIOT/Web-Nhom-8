@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập – BookGroup8</title>
+    <link rel="stylesheet" href="CSS/themes.css" />
+    <link rel="stylesheet" href="CSS/default.css" />
+    <link rel="stylesheet" href="CSS/dangnhap.css" />
+    <script src="JAVASCRIPT/dangnhap.js"></script>
+  </head>
+  <body>
+    <div class="container__login">
+      <div class="container__login--left">
+        <div class="login__left--img">
+          <img src="asset/icon/login/anh_nen.png" alt="ảnh nền" />
+        </div>
+
+        <div class="login__left--text">
+          <div class="left__text--h1">
+            <h1>Khám phá<br />Tri thức<br />Mỗi ngày</h1>
+          </div>
+          <div class="left__text--paragraph">
+            <p>
+              Sản phẩm có hơn 1000 cuốn sách được sưu tầm và chọn lọc, đem lại
+              cho người dùng tri thức, hiểu biết sâu rộng về xã hội, con người,
+              khoa học. Được phát triển bởi nhóm 8, môn thiết kế Web thầy Thái
+            </p>
+
+            <!-- Wrapper stats — FIX: flex row -->
+            <div class="login__left--stats">
+              <div class="stat-item">
+                <h1>1000+</h1>
+                <h3>Đầu sách</h3>
+              </div>
+              <div class="stat-item">
+                <h1>4</h1>
+                <h3>Độc giả</h3>
+              </div>
+              <div class="stat-item">
+                <h1>5 <img src="asset/icon/login/star.svg" alt="sao" /></h1>
+                <h3>Đánh giá</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ RIGHT: FORM ══ -->
+      <div class="container__login--right">
+        <!-- Logo -->
+        <a href="index.html" class="login__right--logo">
+          <div class="logo-icon">
+            <img src="asset/icon/login/logo.svg" alt="logo web" />
+          </div>
+          <span class="logo-text">BookGroup8</span>
+        </a>
+
+        <!-- Link quay về trang chủ -->
+        <a href="index.html" class="login__right--back"> Quay về trang chủ </a>
+        <h1>Đăng nhập</h1>
+        <p>Chưa có tài khoản? <a href="dangky.html">Đăng ký miễn phí</a></p>
+
+        <form class="login__right" onsubmit="return false;">
+          <div class="login__right--btn">
+            <button class="right__btn" type="button">
+              <div class="right__btn--logo">
+                <img src="asset/icon/login/google.svg" alt="logo google" />
+              </div>
+              <span class="right__btn--name">Google</span>
+            </button>
+            <button class="right__btn" type="button">
+              <div class="right__btn--logo">
+                <img src="asset/icon/login/facebook.svg" alt="logo facebook" />
+              </div>
+              <span class="right__btn--name">Facebook</span>
+            </button>
+          </div>
+
+          <div class="login__right--hr">
+            <p>Hoặc đăng nhập bằng Email</p>
+          </div>
+
+          <div class="login__right--input">
+            <div class="right__input">
+              <label for="email">Email</label>
+              <div class="right__input--icon">
+                <img src="asset/icon/login/email.svg" alt="icon email" />
+              </div>
+              <input
+                type="email"
+                class="right__input--input"
+                id="email"
+                name="email"
+                placeholder="thiennhann0006@gmail.com"
+                autocomplete="email"
+              />
+            </div>
+
+            <!-- FIX placeholder mật khẩu -->
+            <div class="right__input">
+              <label for="password">Mật khẩu</label>
+              <div class="right__input--icon">
+                <img src="asset/icon/login/password.svg" alt="icon password" />
+              </div>
+              <div class="right__input--showpass" id="toggle-pw">
+                <img
+                  src="asset/icon/login/show_password.svg"
+                  alt="hiện mật khẩu"
+                />
+              </div>
+              <input
+                type="password"
+                class="right__input--input"
+                id="password"
+                name="password"
+                placeholder="Nhập mật khẩu của bạn"
+                autocomplete="current-password"
+              />
+            </div>
+          </div>
+
+          <div class="login__right--memory">
+            <div class="right__memory--check">
+              <input type="checkbox" name="check" id="checkbox" />
+              <span>Ghi nhớ đăng nhập</span>
+            </div>
+            <a href="quenmatkhau.html">Quên mật khẩu?</a>
+          </div>
+
+          <div class="login__right--finalbtn">
+            <button type="submit" id="btn-login">Đăng nhập</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

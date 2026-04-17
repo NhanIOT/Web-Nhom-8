@@ -128,13 +128,9 @@ table {
   border-spacing: 0;
 }
 
-/******************
-     THEME 
-*******************/
+/* THEME */
 :root {
-  /*=============== 
-        NEUTRALS 
-    =================*/
+  /*  NEUTRALS */
   --gray-50: hsl(0, 0%, 98%);
   --gray-100: hsl(0, 0%, 95%);
   --gray-200: hsl(0, 0%, 90%);
@@ -147,9 +143,7 @@ table {
   --gray-900: hsl(0, 0%, 10%);
   --foreground-color: hsl(0, 0%, 100%); /* nền trắng chính */
 
-  /*=============== 
-        COLORS 
-    =================*/
+  /*COLORS */
   /* Primary — Đỏ tươi đậm(crimson-red) */
   --p-20: hsl(2, 100%, 99%); /* trắng hồng rất nhạt */
   --p-50: hsl(2, 100%, 97%);
@@ -191,9 +185,7 @@ table {
     hsl(2, 96%, 93%) 55%,
     var(--foreground-color) 100%
   );
-  /*================================= 
-        FONTS — Scale 1.125
-    =================================*/
+  /*FONTS — Scale 1.125*/
   /* 32px */
   --h1-font-size: 2rem;
   --h1-line-height: 2.25rem;
