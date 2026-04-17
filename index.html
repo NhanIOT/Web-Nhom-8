@@ -3,39 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web sách nhóm 8</title>
+    <title>BookGroup8.com</title>
     <link rel="stylesheet" href="CSS/themes.css" />
     <link rel="stylesheet" href="CSS/main.css" />
     <link rel="stylesheet" href="CSS/banner.css" />
     <link rel="stylesheet" href="CSS/header.css" />
     <link rel="stylesheet" href="CSS/footer.css" />
-    <link rel="stylesheet" href="CSS/container.css" />
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="CSS/newsletter.css" />
+    <link rel="stylesheet" href="CSS/default.css" />
+    <link rel="stylesheet" href="CSS/responsive.css" />
+    <script src="JAVASCRIPT/index.js"></script>
   </head>
   <body>
+    <!--STICKY-->
     <div class="container__sticky">
-      <div class="container__banner">
-        <span class="container__banner--text"
-          >CÙNG NHÓM 8 KHÁM PHÁ TRI THỨC - VƯƠN TỚI TƯƠNG LAI
-        </span>
-        <button class="container__banner--btn">MUA NGAY</button>
+      <div class="banner">
+        <span class="banner__text"
+          >CÙNG NHÓM 8 KHÁM PHÁ TRI THỨC - VƯƠN TỚI TƯƠNG LAI</span
+        >
+        <button class="banner__btn">MUA NGAY</button>
       </div>
 
-      <header class="container__header">
-        <div class="container__header--logo">
-          <img src="asset/icon/header/LOGO.svg" alt="Logo" />
+      <header class="header">
+        <div class="header__logo">
+          <img src="asset/icon/header/logo.svg" alt="Logo" />
+          <span>BookGroup8</span>
         </div>
 
-        <nav class="container__header--danh-muc">
+        <nav class="header__nav">
           <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Sản phẩm</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="sanpham.html">Sản phẩm</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
           </ul>
         </nav>
 
-        <div class="container__header--search">
+        <div class="header__search">
           <input type="text" placeholder="Tìm kiếm sách..." />
           <button>
             <img
@@ -45,7 +49,7 @@
           </button>
         </div>
 
-        <nav class="container__header--quan-trong">
+        <nav class="header__quan-trong">
           <ul>
             <li>
               <img
@@ -65,7 +69,7 @@
           </ul>
         </nav>
 
-        <div class="container__header--countries">
+        <div class="header__countries">
           <select>
             <option value="vn">VI</option>
             <option value="en">EN</option>
@@ -75,261 +79,334 @@
       </header>
     </div>
 
-    <div class="container">
-      <div class="container__main">
-        <div class="container__main--left">
+    <!--MAIN CONTENT-->
+    <main class="container">
+      <div class="main">
+        <div class="main__left">
           <div class="main__left--img">
-            <img src="asset/img/primary-banner.png" alt="Primary Banner" />
+            <img src="asset/img/Phong/nen_chinh_1.png" alt="Primary Banner" />
           </div>
-
+          <div class="main__left--img">
+            <img src="asset/img/Phong/nen_chinh_2.png" alt="Primary Banner" />
+          </div>
+          <div class="main__left--img">
+            <img src="asset/img/Phong/nen_chinh_3.png" alt="Primary Banner" />
+          </div>
+          <div class="main__left--img">
+            <img src="asset/img/Phong/nen_chinh_4.png" alt="Primary Banner" />
+          </div>
+          <div class="main__left--img">
+            <img src="asset/img/Phong/nen_chinh_5.png" alt="Primary Banner" />
+          </div>
           <button class="main__left--prev">&#8249;</button>
           <button class="main__left--next">&#8250;</button>
-
           <div class="main__left--dots">
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </div>
 
-        <div class="container__main--right">
-          <div class="main__right--banner">
-            <img src="asset/img/secondary-banner.png" alt="Secondary Banner" />
+        <div class="main__right">
+          <div class="main__right--box">
+            <img src="asset/img/Phong/nen_phu_1.png" alt="Secondary Banner" />
           </div>
-
-          <div class="main__right--banner">
-            <img src="asset/img/tertiary-banner.png" alt="Secondary Banner" />
-          </div>
-        </div>
-
-        <div class="container__main--cards">
-          <div class="main__card--element">
-            <img src="asset/img/card-1.png" alt="card 1" />
-          </div>
-          <div class="main__card--element">
-            <img src="asset/img/card-2.png" alt="card 2" />
-          </div>
-          <div class="main__card--element">
-            <img src="asset/img/card-3.png" alt="card 3" />
-          </div>
-          <div class="main__card--element">
-            <img src="asset/img/card-4.png" alt="card 4" />
+          <div class="main__right--box">
+            <img src="asset/img/Phong/nen_phu_2.png" alt="Secondary Banner" />
           </div>
         </div>
 
-        <div class="container__main--theloai">
+        <div class="main__cards">
+          <div class="main__card--element">
+            <img src="asset/img/Phong/element_under_1.png" alt="card 1" />
+          </div>
+          <div class="main__card--element">
+            <img src="asset/img/Phong/element_under_3.png" alt="card 2" />
+          </div>
+          <div class="main__card--element">
+            <img src="asset/img/Phong/element_under_2.png" alt="card 3" />
+          </div>
+          <div class="main__card--element">
+            <img src="asset/img/Phong/element_under_4.png" alt="card 4" />
+          </div>
+        </div>
+
+        <div class="main__theloai">
           <div class="main__theloai--element">
-            <img src="" alt="element 1" />
-            <span>Văn học</span>
+            <img src="asset/img/Element_offers/Harvard.svg" alt="element 1" />
+            <span>Harvard University</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 2" />
-            <span>Kinh tế</span>
+            <img src="asset/img/Element_offers/Tsingua.svg" alt="element 2" />
+            <span>Tsingua University</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 3" />
-            <span>Tâm lý</span>
+            <img src="asset/img/Element_offers/Mit.svg" alt="element 3" />
+            <span>MIT University</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 4" />
-            <span>Thiếu nhi</span>
+            <img src="asset/img/Element_offers/Vin.svg" alt="element 4" />
+            <span>Vin University</span>
+          </div>
+
+          <div class="main__theloai--element">
+            <img src="asset/img/Element_offers/NEU.svg" alt="element 6" />
+            <span>National Economic University</span>
+          </div>
+
+          <div class="main__theloai--element">
+            <img
+              src="asset/img/Element_offers/shogakugan.svg"
+              alt="element 11"
+            />
+            <span>Shogakugan</span>
+          </div>
+
+          <div class="main__theloai--element">
+            <img
+              src="asset/img/Element_offers/Alpha_Books.svg"
+              alt="element 5"
+            />
+            <span>Alpha Books</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 5" />
-            <span>Ngoại ngữ</span>
+            <img src="asset/img/Element_offers/Kim_dong.svg" alt="element 7" />
+            <span>Kim Đồng</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 6" />
-            <span>Khoa học</span>
+            <img src="asset/img/Element_offers/amazon.svg" alt="element 8" />
+            <span>Amazon</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 7" />
-            <span>Lịch sử</span>
+            <img src="asset/img/Element_offers/alibaba.svg" alt="element 9" />
+            <span>Alibaba</span>
           </div>
           <div class="main__theloai--element">
-            <img src="" alt="element 8" />
-            <span>Kỹ năng</span>
-          </div>
-          <div class="main__theloai--element">
-            <img src="" alt="element 9" />
-            <span>Giáo khoa</span>
-          </div>
-          <div class="main__theloai--element">
-            <img src="" alt="element 10" />
-            <span>Truyện tranh</span>
-          </div>
-          <div class="main__theloai--element">
-            <img src="" alt="element 11" />
-            <span>Tôn giáo</span>
+            <img src="asset/img/Element_offers/shopee.svg" alt="element 10" />
+            <span>Shopee</span>
           </div>
         </div>
       </div>
 
-      <div class="container__main--flash-sale">
-        <div class="flash-sale__header">
-          <h2>Flash Sale</h2>
-          <div class="main__flash-sale--timer">
-            <span>Kết thúc trong</span>
-            <span>00</span> : <span>00</span> : <span>00</span>
+      <!--FLASH SALE-->
+      <div class="main__flashsale">
+        <div class="main__flashsale--header">
+          <div class="flashsale__header--icon">
+            <img
+              src="asset/icon/Icon_danh_muc/Flash_sale.svg"
+              alt="Flash Sale Icon"
+            />
           </div>
-
+          <div class="flashsale__header--timer">
+            <span>Kết thúc trong</span>
+            <span>00</span><span class="sep">:</span><span>00</span
+            ><span class="sep">:</span><span>00</span>
+          </div>
           <a href="#">Xem tất cả</a>
         </div>
-        <div class="main__flash-sale--products">
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-1.png" alt="Flash Sale 1" />
-            <div class="product__sale">
-              <span class="sale__percent">-20%</span>
+        <div class="main__flashsale--products">
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+              alt="Flash Sale 1"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-20%</span>
             </div>
-            <span class="product__name">Sách A</span>
-            <span class="product__price">100.000đ</span>
+            <span class="product__element--name">Chém Tiếng Anh</span>
+            <span class="product__element--price">150.000đ</span>
           </div>
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-2.png" alt="Flash Sale 2" />
-            <div class="product__sale">
-              <span class="sale__percent">-30%</span>
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Different_books/Kinh_di/KD_LoiTienTriCuoiCung.png"
+              alt="Flash Sale 2"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-30%</span>
             </div>
-
-            <span class="product__name">Sách B</span>
-            <span class="product__price">150.000đ</span>
+            <span class="product__element--name">Lời Tiên Tri Cuối Cùng</span>
+            <span class="product__element--price">140.000đ</span>
           </div>
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-3.png" alt="Flash Sale 3" />
-            <div class="product__sale">
-              <span class="sale__percent">-30%</span>
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Foreign_books/FB_TheMoneyTrap.png"
+              alt="Flash Sale 3"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-30%</span>
             </div>
-            <span class="product__name">Sách C</span>
-            <span class="product__price">200.000đ</span>
+            <span class="product__element--name">The Money Trap</span>
+            <span class="product__element--price">200.000đ</span>
           </div>
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-4.png" alt="Flash Sale 4" />
-            <div class="product__sale">
-              <span class="sale__percent">-50%</span>
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Ngoaingu/NN_TiengAnhGenZ.png"
+              alt="Flash Sale 4"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-50%</span>
             </div>
-            <span class="product__name">Sách D</span>
-            <span class="product__price">250.000đ</span>
+            <span class="product__element--name">Tiếng Anh GenZ</span>
+            <span class="product__element--price">30.000đ</span>
           </div>
-
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-5.png" alt="Flash Sale 5" />
-            <div class="product__sale">
-              <span class="sale__percent">-40%</span>
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Ngoaingu/NN_Top1000TuTiengTrung.png"
+              alt="Flash Sale 5"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-40%</span>
             </div>
-            <span class="product__name">Sách E</span>
-            <span class="product__price">300.000đ</span>
+            <span class="product__element--name"
+              >Top 1000 Từ Vựng Tiếng Trung</span
+            >
+            <span class="product__element--price">140.000đ</span>
           </div>
-
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-6.png" alt="Flash Sale 6" />
-            <div class="product__sale">
-              <span class="sale__percent">-25%</span>
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Lichsu_Dialy_Tongiao/LSDLTG_DaiVietThongSu.png"
+              alt="Flash Sale 6"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-25%</span>
             </div>
-            <span class="product__name">Sách F</span>
-            <span class="product__price">350.000đ</span>
+            <span class="product__element--name">Đại Việt Thông Sử</span>
+            <span class="product__element--price">75.000đ</span>
           </div>
-
-          <div class="flash-sale__product--element">
-            <img src="asset/img/flash-sale-7.png" alt="Flash Sale 7" />
-            <div class="product__sale">
-              <span class="sale__percent">-25%</span>
+          <div class="flashsale__product--element">
+            <img
+              src="asset/img/Khoahoc_Kythuat/KHKT_KyThuatAI.png"
+              alt="Flash Sale 7"
+            />
+            <div class="product__element--sale">
+              <span class="element__sale--percent">-25%</span>
             </div>
-            <span class="product__name">Sách G</span>
-            <span class="product__price">400.000đ</span>
+            <span class="product__element--name">Kỹ Thuật AI</span>
+            <span class="product__element--price">200.000đ</span>
           </div>
         </div>
       </div>
 
-      <!-- ══ DANH MỤC SẢN PHẨM ══ -->
-      <div class="container__main--danhmuc-sanpham">
-        <div class="main__danhmuc-sanpham--header">
-          <div class="header__sec-icon">
+      <!--DANH MỤC SẢN PHẨM-->
+      <div class="main__danhmucsanpham">
+        <div class="main__danhmucsanpham--header">
+          <div class="danhmucsanpham__header--icon">
             <img
-              src="asset/img/category-icon.png"
+              src="asset/icon/Icon_danh_muc/Danh_muc_san_pham.svg"
               alt="Icon danh mục sản phẩm"
             />
           </div>
-          <span class="header__sec-title">Danh mục sản phẩm</span>
+          <span class="danhmucsanpham__header--title">Danh mục sản phẩm</span>
         </div>
-        <div class="danhmuc-sanpham__content">
-          <div class="danhmuc-sanpham__content--grid">
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/boardgame.png" alt="Boardgame" />
+        <div class="main__danhmucsanpham--element">
+          <div class="danhmucsanpham__element--grid">
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Board_game.png"
+                  alt="Boardgame"
+                />
               </div>
               <span>Boardgame</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
+            <div class="element__grid--item">
+              <div class="element__grid--img">
                 <img
-                  src="asset/img/school-supplies.png"
+                  src="asset/img/Item_sanh_quan_trong/Casio.png"
                   alt="Thiết bị học tập"
                 />
               </div>
               <span>Thiết bị học tập</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/photo-paper.png" alt="Giấy photo" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Giay_A4.png"
+                  alt="Giấy photo"
+                />
               </div>
               <span>Giấy photo</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
+            <div class="element__grid--item">
+              <div class="element__grid--img">
                 <img
-                  src="asset/img/research-tools.png"
+                  src="asset/img/Item_sanh_quan_trong/Ong_nghiem.png"
                   alt="Vật dụng nghiên cứu"
                 />
               </div>
               <span>Vật dụng nghiên cứu</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/historical-books.png" alt="Sách lịch sử" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Sach_lich_Su.png"
+                  alt="Sách lịch sử"
+                />
               </div>
               <span>Lịch sử Việt Nam</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/literature.png" alt="Văn học" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Van_hoc.png"
+                  alt="Văn học"
+                />
               </div>
               <span>Văn học</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/psychology.png" alt="Tâm lý kĩ năng" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Tamly_kynang.png"
+                  alt="Tâm lý kĩ năng"
+                />
               </div>
               <span>Tâm lý kĩ năng</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/children-books.png" alt="Thiếu nhi" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Thieu_nhi.png"
+                  alt="Thiếu nhi"
+                />
               </div>
               <span>Thiếu nhi</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
+            <div class="element__grid--item">
+              <div class="element__grid--img">
                 <img
-                  src="asset/img/foreign-language-books.png"
+                  src="asset/img/Item_sanh_quan_trong/Sach_hoc_ngoai_ngu.png"
                   alt="Sách học ngoại ngữ"
                 />
               </div>
               <span>Sách học ngoại ngữ</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/reference-books.png" alt="Sách tham khảo" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Sach_tham_khao.png"
+                  alt="Sách tham khảo"
+                />
               </div>
               <span>Sách tham khảo</span>
             </div>
-            <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/truyen_tranh.png" alt="Truyện tranh" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Truyen_tranh.png"
+                  alt="Truyện tranh"
+                />
               </div>
               <span>Truyện tranh</span>
             </div>
-             <div class="sanpham__grid--item">
-              <div class="sanpham__grid--img">
-                <img src="asset/img/sach_cong_nghe.png" alt="Sách công nghệ" />
+            <div class="element__grid--item">
+              <div class="element__grid--img">
+                <img
+                  src="asset/img/Item_sanh_quan_trong/Sach_cong_nghe.png"
+                  alt="Sách công nghệ"
+                />
               </div>
               <span>Sách công nghệ</span>
             </div>
@@ -337,680 +414,1350 @@
         </div>
       </div>
 
-      <!-- ══ PHIẾU QUÀ TẶNG / GIFT CARD ══ -->
-  <div class="container__main--giftcard">
-    <div class="container__main--giftcard-header sec-head sec-head-red">
-      <div class="giftcard__header--icon">
-        <img src="" alt="icon phiếu quà tặng" />
+      <!--PHIẾU QUÀ TẶNG / GIFT CARD-->
+      <div class="main__giftcard">
+        <div class="main__giftcard-header sec-head sec-head-red">
+          <div class="giftcard__header--icon">
+            <img
+              src="asset/icon/Icon_danh_muc/Phieu_qua_tang.svg"
+              alt="icon phiếu quà tặng"
+            />
+          </div>
+          <span class="giftcard__header--title"
+            >Phiếu Quà Tặng – Gift Card</span
+          >
+        </div>
+        <div style="position: relative">
+          <div class="giftcard__content--grid">
+            <div class="giftcard__card">
+              <div class="giftcard__card--img">
+                <img
+                  src="asset/img/The_giam_gia/giam_gia_1.png"
+                  alt="ảnh phiếu quà tặng"
+                />
+              </div>
+              <div class="giftcard__info">
+                <div class="giftcard__info--name">Long Vượng Phát Tài</div>
+                <div class="giftcard__info--price">100.000đ</div>
+              </div>
+            </div>
+            <div class="giftcard__card">
+              <div class="giftcard__card--img">
+                <img
+                  src="asset/img/The_giam_gia/giam_gia_2.png"
+                  alt="ảnh phiếu quà tặng"
+                />
+              </div>
+              <div class="giftcard__info">
+                <div class="giftcard__info--name">Phụng Hoàng Cát Tường</div>
+                <div class="giftcard__info--price">200.000đ</div>
+              </div>
+            </div>
+            <div class="giftcard__card">
+              <div class="giftcard__card--img">
+                <img
+                  src="asset/img/The_giam_gia/giam_Gia_3.png"
+                  alt="ảnh phiếu quà tặng"
+                />
+              </div>
+              <div class="giftcard__info">
+                <div class="giftcard__info--name">Quyền Lực</div>
+                <div class="giftcard__info--price">1.000.000đ</div>
+              </div>
+            </div>
+            <div class="giftcard__card">
+              <div class="giftcard__card--img">
+                <img
+                  src="asset/img/The_giam_gia/giam_gia_4.png"
+                  alt="ảnh phiếu quà tặng"
+                />
+              </div>
+              <div class="giftcard__info">
+                <div class="giftcard__info--name">Văn hoá</div>
+                <div class="giftcard__info--price">50.000đ</div>
+              </div>
+            </div>
+          </div>
+          <button class="dieuhuong__btn" style="top: 50%; right: 6px">›</button>
+        </div>
+        <div class="dieuhuong__btn--morewrap">
+          <button class="dieuhuong__btn--more">Xem thêm</button>
+        </div>
       </div>
-      <span class="giftcard__header--title">Phiếu Quà Tặng – Gift Card</span>
-    </div>
-    <div style="position:relative">
-      <div class="giftcard__content--grid">
-        <div class="giftcard__card">
-          <div class="giftcard__thumb ph"></div>
-          <div class="giftcard__info">
-            <div class="giftcard__name">Phiếu quà tặng 1</div>
-            <div class="giftcard__price">000.000đ</div>
-          </div>
-        </div>
-        <div class="giftcard__card">
-          <div class="giftcard__thumb ph"></div>
-          <div class="giftcard__info">
-            <div class="giftcard__name">Phiếu quà tặng 2</div>
-            <div class="giftcard__price">000.000đ</div>
-          </div>
-        </div>
-        <div class="giftcard__card">
-          <div class="giftcard__thumb ph"></div>
-          <div class="giftcard__info">
-            <div class="giftcard__name">Phiếu quà tặng 3</div>
-            <div class="giftcard__price">000.000đ</div>
-          </div>
-        </div>
-        <div class="giftcard__card">
-          <div class="giftcard__thumb ph"></div>
-          <div class="giftcard__info">
-            <div class="giftcard__name">Phiếu quà tặng 4</div>
-            <div class="giftcard__price">000.000đ</div>
-          </div>
-        </div>
-      </div>
-      <button class="arrow-btn" style="top:50%;right:6px">›</button>
-    </div>
-    <div class="btn-more-wrap">
-      <button class="btn-more">Xem thêm</button>
-    </div>
-  </div>
- 
 
-  <!-- ══ XU HƯỚNG MUA SẮM ══ -->
-  <div class="sec-card">
-    <div style="display:flex;align-items:center;gap:8px;padding:12px 16px 0;">
-      <div class="sec-head-icon">
-        <img src="asset/icon/Danh_muc_xu_huong.svg" alt="icon xu hướng" />
-      </div>
-      <span style="font-weight:700;font-size:15px;color:var(--red);text-transform:uppercase;">Xu Hướng Mua Sắm</span>
-    </div>
-    <div class="tabs">
-      <div class="tab active">Xu hướng Theo Ngày</div>
-      <div class="tab">Sách HOT – Thành đạo</div>
-      <div class="tab">Bestseller Ngoại Văn</div>
-    </div>
-    <div class="prod-grid">
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Tamly_Kynang/TLKNS_DoiNganDungNguDai.png" alt="ảnh sản phẩm" />
+      <!--XU HƯỚNG MUA SẮM-->
+      <div class="main__seccard">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px 0;
+          "
+        >
+          <div class="seccard__head--icon">
+            <img
+              src="asset/icon/Icon_danh_muc/Danh_muc_xu_huong.svg"
+              alt="icon xu hướng"
+            />
+          </div>
+          <span
+            style="
+              font-weight: 700;
+              font-size: 15px;
+              color: var(--p-600);
+              text-transform: uppercase;
+            "
+            >Xu Hướng Mua Sắm</span
+          >
         </div>
-        <div class="prod-thumb ph">
-          <div class="badge">60.000đ</div>
+        <div class="seccard__tabs">
+          <div class="tab active">Xu hướng Theo Ngày</div>
+          <div class="tab">Sách HOT – Thành đạo</div>
+          <div class="tab">Bestseller Ngoại Văn</div>
         </div>
-        <div class="prod-info">
-          <div class="prod-name">Đời ngắn đừng ngủ dài</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Tamly_Kynang/TLKNS_SucManhCuaSuDiuDang.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">85.500đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Sức mạnh của sự dịu dàng</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Tamly_Kynang/TLKNS_VietTuConSo0.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">165.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Viết từ số 0</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Vanhoc/VH_CamOnNguoiLon.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">110.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Cảm ơn người lớn</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Thieunhi/TN_AliceXuSoDieuKy.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">79.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Alice xứ sở diệu kỳ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Ngoaingu/NN_TiengAnhGenZ.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">81.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Tiếng Anh Gen Z</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Kinhte/KT_ChienTranhTienTe.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">185.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Chiến tranh tiền tệ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Kinhte/KT_LanDauLamSep.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">195.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Lần đầu làm sếp</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Kinhte/KT_NhaDauTuThongMinh.png" alt="ảnh sản phẩm" />
-        </div>      
-        <div class="prod-thumb ph">
-          <div class="badge">280.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Nhà đầu tư thông minh</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Khoahoc_Kythuat/KHKT_WhyWeSleep.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">486.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Why We Sleep</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Foreign_books/FB_YouWillLoveThis.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">560.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">You Will Love This</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-card--img">
-          <img src="asset/img/Different_books/Ky_su/KS_ChienTranhVN.png" alt="ảnh sản phẩm" />
-        </div>
-        <div class="prod-thumb ph">
-          <div class="badge">200.000đ</div>
-        </div>
-        <div class="prod-info">
-          <div class="prod-name">Chiến tranh Việt Nam</div>
-        </div>
-      </div>
-    </div>
-    <div class="btn-more-wrap">
-      <button class="btn-more">Xem thêm</button>
-    </div>
-  </div>
- 
-  <!-- ══ SÁCH NGOẠI NGỮ SECTION ══ -->
-  <div class="sec-card">
-    <div class="tabs" style="border-bottom:1px solid #eee;padding-top:10px;">
-      <div class="tab active">Sách Tham Khảo</div>
-      <div class="tab">Giáo trình học ngữ Tiếng Anh</div>
-      <div class="tab">Tủ Ngoại Ngữ</div>
-    </div>
-    <div class="row-wrap" style="position:relative">
-      <div class="prod-row">
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_ChemTiengAnh.png" alt="ảnh sản phẩm" />
+        <div class="seccard__products">
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Tamly_Kynang/TLKNS_ChuaLanhNhungSangChanTuoiTho.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
 
+            <div class="product__grid--info">
+              <div class="grid__info--name">
+                Chữa Lành Những Sang Chấn Tuổi Thơ
+              </div>
+              <div class="grid__info--price">260.000đ</div>
+            </div>
           </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_vietnamstyle.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Viet Nam Style</div>
+              <div class="grid__info--price">250.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img src="asset/img/Thieunhi/TN_ChuCuoi.png" alt="ảnh sản phẩm" />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Chú cuội</div>
+              <div class="grid__info--price">100.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Kinhte/KT_CashIsKing.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Cash Is King</div>
+              <div class="grid__info--price">175.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Truyen_tranh/TT_Doraemon.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">
+                Nobita Và Cuộc Phiêu Lưu Vào Thế Giới Trong Phim
+              </div>
+              <div class="grid__info--price">135.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Truyen_tranh/TT_Conan107.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Conan Tập 107</div>
+              <div class="grid__info--price">135.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Truyen_tranh/TT_SpyXFamily.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">SpyXFamily Tập 14</div>
+              <div class="grid__info--price">150.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Truyen_tranh/TT_Shin50.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Shin Cậu Bé Bút Chì Tập 50</div>
+              <div class="grid__info--price">29.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Truyen_tranh/TT_TonTonFriends.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">
+                TonTon Friends Hội Chân Ngắn Siêu Lầy
+              </div>
+              <div class="grid__info--price">160.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Ngon_tinh/NT_BenXe.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Bến Xe</div>
+              <div class="grid__info--price">160.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Kinh_di/KD_NhaTuShawshank.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Nhà Tù ShawShack</div>
+              <div class="grid__info--price">260.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Tamly_Kynang/TLKNS_DoiNganDungNguDai.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Đời ngắn đừng ngủ dài</div>
+              <div class="grid__info--price">160.000đ</div>
+            </div>
           </div>
         </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_GiaoTrinhTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-      </div>
-      <button class="arrow-btn">›</button>
-    </div>
-    <div class="btn-more-wrap">
-      <button class="btn-more">Xem tất cả</button>
-    </div>
-  </div>
- 
-  <!-- ══ TỦ SÁCH NỔI BẬT ══ -->
-  <div class="sec-card">
-    <div class="sec-head sec-head-red">
-      <div class="sec-icon">
-        <img src="" alt="icon tủ sách nổi bật" />
-      </div>
-      <span class="sec-title">Tủ Sách Nổi Bật</span>
-    </div>
-    <div class="row-wrap" style="position:relative">
-      <div class="prod-row">
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_ChemTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_GiaoTrinhTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-      </div>
-      <button class="arrow-btn">›</button>
-    </div>
-  </div>
- 
-  <!-- ══ BẢNG XẾP HẠNG BÁN CHẠY TUẦN ══ -->
-  <div class="sec-card">
-    <div class="sec-head sec-head-red">
-      <div class="sec-icon">
-        <img src="" alt="icon bảng xếp hạng bán chạy" />
-      </div>
-      <span class="sec-title">Bảng xếp hạng bán chạy tuần</span>
-    </div>
-    <div class="tabs" style="background:#fafafa;">
-      <div class="tab active">Văn học</div>
-      <div class="tab">Kinh tế</div>
-      <div class="tab">Tâm lý – Kỹ năng sống</div>
-      <div class="tab">Thiếu nhi</div>
-      <div class="tab">Sách học ngoại ngữ</div>
-      <div class="tab">Foreign Books</div>
-      <div class="tab">Lịch sử – Địa lý – Tiến giới</div>
-      <div class="tab">Khoa học kỹ thuật</div>
-      <div class="tab">Thể loại khác</div>
-    </div>
-    <div class="ranking-layout">
-      <div class="ranking-list-col">
-        <div class="ranking-item">
-          <span class="rank-num r1">01</span>
-          <div style="font-size:12px;color:#27ae60;">↑</div>
-          <div class="rank-card--img">
-            <img src="asset/img/Ngoaingu/NN_ChemiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="rank-info"><div class="rank-name">THÔNG TIN SÁCH</div><div class="rank-tag">Tác giả</div></div>
-        </div>
-        <div class="ranking-item">
-          <span class="rank-num r2">02</span>
-          <div style="font-size:12px;color:#27ae60;">↑</div>
-          <div class="rank-card--img">
-            <img src="asset/img/Ngoaingu/NN_GiaoTrinhTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="rank-info"><div class="rank-name">THÔNG TIN SÁCH</div><div class="rank-tag">Tác giả</div></div>
-        </div>
-        <div class="ranking-item">
-          <span class="rank-num r3">03</span>
-          <div style="font-size:12px;color:#27ae60;">↑</div>
-          <div class="rank-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="rank-info"><div class="rank-name">THÔNG TIN SÁCH</div><div class="rank-tag">Tác giả</div></div>
-        </div>
-        <div class="ranking-item">
-          <span class="rank-num">04</span>
-          <div style="font-size:12px;color:#27ae60;">↑</div>
-          <div class="rank-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="rank-info"><div class="rank-name">THÔNG TIN SÁCH</div><div class="rank-tag">Tác giả</div></div>
-        </div>
-        <div class="ranking-item">
-          <span class="rank-num">05</span>
-          <div style="font-size:12px;color:#27ae60;">↑</div>
-          <div class="rank-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="rank-info"><div class="rank-name">THÔNG TIN SÁCH</div><div class="rank-tag">Tác giả</div></div>
+        <div class="dieuhuong__btn--morewrap">
+          <button class="dieuhuong__btn--more">Xem thêm</button>
         </div>
       </div>
-      <div class="ranking-featured">
-        <div class="rank-featured-img">
-          <img src="asset/img/Ngoaingu/NN_ChemiengAnh.png" alt="ảnh sản phẩm" />
+
+      <!--SÁCH NGOẠI NGỮ-->
+      <div class="main__seccard">
+        <div
+          class="seccard__tabs"
+          style="border-bottom: 1px solid #eee; padding-top: 10px"
+        >
+          <div class="tab active">Sách Tham Khảo</div>
+          <div class="tab">Giáo trình học ngữ Tiếng Anh</div>
+          <div class="tab">Tủ Ngoại Ngữ</div>
         </div>
-        <div class="rank-featured-info">THÔNG TIN SÁCH</div>
+        <div class="seccard__products">
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Ky_su/KS_DiDocHaNoi.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Đi dọc Hà Nội</div>
+              <div class="grid__info--price">120.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Kinhte/KT_NghiGiauLamGiau.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Nghĩ giàu và làm giàu</div>
+              <div class="grid__info--price">390.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Khoahoc_Kythuat/KHKT_Tarot.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Khai mở Tarot</div>
+              <div class="grid__info--price">200.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Thieunhi/TN_LuocSuVNBangTranh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Lược sử nước Việt bằng tranh</div>
+              <div class="grid__info--price">310.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Lichsu_Dialy_Tongiao/LSDLTG_MuonKiepNhanSinh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Muôn kiếp nhân sinh</div>
+              <div class="grid__info--price">210.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_Ikigai.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Ikigiai</div>
+              <div class="grid__info--price">120.000đ</div>
+            </div>
+          </div>
+        </div>
+        <div class="dieuhuong__btn--morewrap">
+          <button class="dieuhuong__btn--more">Xem thêm</button>
+        </div>
       </div>
-    </div>
-    <div class="btn-more-wrap"><button class="btn-more">Xem thêm</button></div>
-  </div>
- 
-  <!-- ══ COMBO TRENDING ══ -->
-  <div class="sec-card">
-    <div style="display:flex;align-items:center;gap:8px;padding:12px 16px 0;">
-      <span style="font-size:18px;">
-        <img src="" alt="icon combo trending" />
+
+      <!--TỦ SÁCH NỔI BẬT-->
+      <div class="main__seccard">
+        <div class="seccard__header sec-head sec-head-red">
+          <div class="seccard__header--icon">
+            <img
+              src="asset/icon/Icon_danh_muc/Noi_bat.svg"
+              alt="icon tủ sách nổi bật"
+            />
+          </div>
+          <span class="seccard__header--title">Tủ Sách Nổi Bật</span>
+        </div>
+        <div class="seccard__product" style="position: relative">
+          <div class="seccard__product--grid">
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Kinhte/KT_GiaoDichSuBatDinh.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Giao dịch sự bất định</div>
+                <div class="grid__info--price">330.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Different_books/Kinh_di/KD_SiSoLopVang0.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Sỉ số lớp vắng 0</div>
+                <div class="grid__info--price">130.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Different_books/Kinh_di/KD_LoiTienTriCuoiCung.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Lời tiên tri cuối cùng</div>
+                <div class="grid__info--price">150.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Different_books/Ky_su/KS_MaiMaiTuoi20.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Mãi mãi tuối hai mươi</div>
+                <div class="grid__info--price">190.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Foreign_books/FB_HowToNegotiate.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">How to negotive</div>
+                <div class="grid__info--price">300.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Ngoaingu/NN_WordFormation.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Word Formation</div>
+                <div class="grid__info--price">120.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Kinhte/KT_GoodStrategyBadStrategy.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Good strategy Bad strategy</div>
+                <div class="grid__info--price">400.000đ</div>
+              </div>
+            </div>
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Khoahoc_Kythuat/KHKT_LichSuCuaLenMen.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Lịch sử của lên men</div>
+                <div class="grid__info--price">100.000đ</div>
+              </div>
+            </div>
+
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Different_books/Ngon_tinh/NT_CaPheDoiMotNguoi.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">Cà phê đợi mỗi người</div>
+                <div class="grid__info--price">185.000đ</div>
+              </div>
+            </div>
+
+            <div class="product__grid--card">
+              <div class="product__grid--img">
+                <img
+                  src="asset/img/Different_books/Truyen_tranh/TT_Doraemon.png"
+                  alt="ảnh sản phẩm"
+                />
+              </div>
+              <div class="product__grid--info">
+                <div class="grid__info--name">
+                  Nobita Và Cuộc Phiêu Lưu Vào Thế Giới Trong Phim
+                </div>
+                <div class="grid__info--price">135.000đ</div>
+              </div>
+            </div>
+          </div>
+          <button class="dieuhuong__btn" style="top: 50%; right: -13px">
+            ›
+          </button>
+        </div>
+      </div>
+
+      <!--BẢNG XẾP HẠNG BÁN CHẠY TUẦN-->
+      <div class="main__seccard">
+        <div class="seccard__header sec-head sec-head-red">
+          <div class="seccard__header--icon">
+            <img
+              src="asset/icon/Icon_danh_muc/BXH.svg"
+              alt="icon bảng xếp hạng bán chạy"
+            />
+          </div>
+          <span class="seccard__header--title"
+            >Bảng xếp hạng bán chạy tuần</span
+          >
+        </div>
+        <div class="seccard__tabs" style="background: #fafafa">
+          <div class="tab active">Văn học</div>
+          <div class="tab">Kinh tế</div>
+          <div class="tab">Tâm lý – Kỹ năng sống</div>
+          <div class="tab">Thiếu nhi</div>
+          <div class="tab">Sách học ngoại ngữ</div>
+          <div class="tab">Foreign Books</div>
+          <div class="tab">Lịch sử – Địa lý – Tiến giới</div>
+          <div class="tab">Khoa học kỹ thuật</div>
+          <div class="tab">Thể loại khác</div>
+        </div>
+
+        <div class="seccard__ranking">
+          <div class="seccard__ranking--list">
+            <div class="ranking__list--item">
+              <span class="list__item--num">01</span>
+              <div class="list__item--arrow up">↑</div>
+              <div class="list-item--img">
+                <img src="asset/img/Kinhte/KT_CashIsKing.png" alt="sản phẩm" />
+              </div>
+              <div class="list__item--info">
+                <div class="rank-name">Cash is King</div>
+                <div class="rank-tag">Peter W. Kingma</div>
+              </div>
+            </div>
+            <div class="ranking__list--item">
+              <span class="list__item--num">02</span>
+              <div class="list__item--arrow up">↑</div>
+              <div class="list-item--img">
+                <img
+                  src="asset/img/Kinhte/KT_ChienTranhTienTe.png"
+                  alt="sản phẩm"
+                />
+              </div>
+              <div class="list__item--info">
+                <div class="rank-name">Chiến tranh tiền tệ</div>
+                <div class="rank-tag">Tống Hồng Binh</div>
+              </div>
+            </div>
+            <div class="ranking__list--item">
+              <span class="list__item--num">03</span>
+              <div class="list__item--arrow up">↑</div>
+              <div class="list-item--img">
+                <img
+                  src="asset/img/Kinhte/KT_LanDauLamSep.png"
+                  alt="sản phẩm"
+                />
+              </div>
+              <div class="list__item--info">
+                <div class="rank-name">Lần đầu làm sếp</div>
+                <div class="rank-tag">Julie Zhuo</div>
+              </div>
+            </div>
+            <div class="ranking__list--item">
+              <span class="list__item--num">04</span>
+              <div class="list__item--arrow up">↑</div>
+              <div class="list-item--img">
+                <img
+                  src="asset/img/Kinhte/KT_NghiGiauLamGiau.png"
+                  alt="sản phẩm"
+                />
+              </div>
+              <div class="list__item--info">
+                <div class="rank-name">Nghĩ giàu và làm giàu</div>
+                <div class="rank-tag">Napoleon Hill</div>
+              </div>
+            </div>
+            <div class="ranking__list--item">
+              <span class="list__item--num">05</span>
+              <div class="list__item--arrow up">↑</div>
+              <div class="list-item--img">
+                <img
+                  src="asset/img/Kinhte/KT_NhaDauTuThongMinh.png"
+                  alt="sản phẩm"
+                />
+              </div>
+              <div class="list__item--info">
+                <div class="rank-name">Nhà đầu tư thông minh</div>
+                <div class="rank-tag">Benjamin Graham</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột 2: Ảnh bìa lớn -->
+          <div class="seccard__ranking--featured">
+            <div class="ranking__featured--img">
+              <img
+                src="asset/img/Kinhte/KT_CashIsKing.png"
+                alt="ảnh sản phẩm nổi bật"
+              />
+            </div>
+            <div class="ranking__featured--info">
+              <div class="featured__info--links">
+                <a href="#muahang">Mua ngay</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột 3: Chi tiết sách -->
+          <div class="ranking__featured--detail">
+            <div class="ranking__detail--title">Cash is King</div>
+            <div class="ranking__detail--author">Tác giả: Peter W. Kingma</div>
+            <div class="ranking__detail--publisher">
+              Nhà xuất bản: Nhà xuất bản Công Thương
+            </div>
+            <div class="ranking__detail--price-wrap">
+              <span class="ranking__detail--price">175.200đ</span>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  margin-top: 4px;
+                "
+              >
+                <span class="ranking__detail--price-old">219.000đ</span>
+                <span class="ranking__detail--discount">-20%</span>
+              </div>
+            </div>
+            <div class="ranking__detail--desc-title">Về cuốn sách</div>
+            <div class="ranking__detail--desc">
+              Trong thế giới kinh doanh, nhiều doanh nghiệp có thể đạt doanh thu
+              cao, mở rộng thị trường và phát triển nhanh chóng, nhưng vẫn rơi
+              vào khủng hoảng chỉ vì một lý do đơn giản: thiếu tiền mặt. Cuốn
+              sách “Tiền mặt là vua” đưa người đọc đến với một góc nhìn cốt lõi
+              nhưng thường bị bỏ qua trong quản trị doanh nghiệp, quản lý dòng
+              tiền và vốn lưu động. Tác giả Peter W. Kingma, chuyên gia
+            </div>
+            <div class="ranking__detail--desc-title">Về tác giả</div>
+            <div class="ranking__detail--desc">
+              Peter W. Kingma là một chuyên gia tài chính doanh nghiệp
+              (corporate finance) và chiến lược gia về vốn lưu động (working
+              capital), nổi tiếng trong lĩnh vực quản lý dòng tiền của doanh
+              nghiệp.
+            </div>
+          </div>
+        </div>
+        <div class="dieuhuong__btn--morewrap">
+          <button class="dieuhuong__btn--more">Xem thêm</button>
+        </div>
+      </div>
+
+      <!--COMBO TRENDING-->
+      <div class="main__seccard">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px 0;
+          "
+        >
+          <div class="seccard__head--icon">
+            <img
+              src="asset/icon/Icon_danh_muc/Trend.svg"
+              alt="icon combo trending"
+            />
+          </div>
+          <span
+            style="
+              font-weight: 700;
+              font-size: 15px;
+              color: var(--p-500);
+              text-transform: uppercase;
+            "
+            >Combo Trending</span
+          >
+        </div>
+        <div class="seccard__tabs">
+          <div class="tab active">Combo Kinh tế</div>
+          <div class="tab">Combo Sách học Ngoại ngữ</div>
+          <div class="tab">Combo Tâm lý – Kỹ năng sống</div>
+          <div class="tab">Combo Văn học</div>
+          <div class="tab">Combo Thiếu nhi</div>
+        </div>
+        <div class="seccard__products" style="position: relative">
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Combo Đầu tư</div>
+              <div class="grid__info--price">1000.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Combo Luật kinh tế</div>
+              <div class="grid__info--price">1340.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Combo Dòng tiền</div>
+              <div class="grid__info--price">900.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">
+                Combo Chứng khoán cho người mới bắt đầu
+              </div>
+              <div class="grid__info--price">1500.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Combo Thuế</div>
+              <div class="grid__info--price">1100.000đ</div>
+            </div>
+          </div>
+          <div class="seccard__products--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_ChemTiengAnh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Combo Làm chủ trong kinh doanh</div>
+              <div class="grid__info--price">800.000đ</div>
+            </div>
+          </div>
+        </div>
+        <div class="dieuhuong__btn--morewrap">
+          <button class="dieuhuong__btn--more">Xem thêm</button>
+        </div>
+      </div>
+
+      <!--GỢI Ý CHO BẠN-->
+      <div class="main__goiy">
+        <div class="main__goiy--header sec-head sec-head-red">
+          <span class="goiy__header--title">Gợi ý cho bạn</span>
+        </div>
+        <div class="main__goiy--grid">
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Khoahoc_Kythuat/KHKT_NhinAnKhoaHoc.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Nhịn ăn khoa học</div>
+              <div class="grid__info--price">60.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Khoahoc_Kythuat/KHKT_KyThuatAI.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Kỹ thuật AI</div>
+              <div class="grid__info--price">180.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Kinhte/KT_12NguyenTacKinhDoanh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">12 nguyên tắc kinh doanh</div>
+              <div class="grid__info--price">120.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Ngoaingu/NN_HocVietKatakana.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Học viết Katakana</div>
+              <div class="grid__info--price">150.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Tamly_Kynang/TLKNS_SucManhCuaSuDiuDang.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Sức mạnh của sự dịu dàng</div>
+              <div class="grid__info--price">100.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Tamly_Kynang/TLKNS_MukbangNoiBuon.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Mukbang nỗi buồn</div>
+              <div class="grid__info--price">200.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Tamly_Kynang/TLKNS_AtomicHabits.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Atomic Habits</div>
+              <div class="grid__info--price">300.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Thieunhi/TN_DieuUocMuaDong.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Điều ước mùa đông</div>
+              <div class="grid__info--price">125.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_MeditationInEveryMoment.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Meditation in every moment</div>
+              <div class="grid__info--price">180.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Kinhte/KT_KhongDenMot.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Không đến một</div>
+              <div class="grid__info--price">210.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Kinh_di/KD_KeUocBanDau.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Khế ước bán dâu</div>
+              <div class="grid__info--price">140.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Ngon_tinh/NT_KetThucCuaChungTa.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Kết thúc của chúng ta</div>
+              <div class="grid__info--price">115.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Ky_su/KS_DaLat.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Đà Lạt</div>
+              <div class="grid__info--price">119.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_TheMoneyTrap.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">The money trap</div>
+              <div class="grid__info--price">190.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Kinh_di/KD_TongDaiKeChuyenLuc0h.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Tổng đài kể chuyện lúc 0h</div>
+              <div class="grid__info--price">200.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_scatteredMinds.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Scattered Minds</div>
+              <div class="grid__info--price">230.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img src="asset/img/Vanhoc/VH_MuaDo.png" alt="ảnh sản phẩm" />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Mưa đỏ</div>
+              <div class="grid__info--price">120.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Vanhoc/VH_ThoXuanDieu.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Thơ Xuân Diệu</div>
+              <div class="grid__info--price">129.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Ky_su/KS_SaiGon.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Sài Gòn</div>
+              <div class="grid__info--price">120.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_vietnamstyle.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">VietNam Style</div>
+              <div class="grid__info--price">250.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Kinh_di/KD_NhaTuShawshank.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Nhà tù Shawshank</div>
+              <div class="grid__info--price">260.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Lichsu_Dialy_Tongiao/LSDLTG_LuocSuLoaiNguoi.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Lịch sử loài người</div>
+              <div class="grid__info--price">170.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Kinhte/KT_GiaoDichSuBatDinh.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Giao dịch sự bất định</div>
+              <div class="grid__info--price">330.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Khoahoc_Kythuat/KHKT_StemToanHoc.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Stem Toán học</div>
+              <div class="grid__info--price">99.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Lichsu_Dialy_Tongiao/LSDLTG_SuTraThuCuaDiaLy.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Sự trả thù của địa lý</div>
+              <div class="grid__info--price">199.000đ</div>
+            </div>
+          </div>
+
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Vanhoc/VH_TruyenKieu.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Truyện Kiều</div>
+              <div class="grid__info--price">199.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Tamly_Kynang/TLKNS_VietTuConSo0.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Viết từ con số 0</div>
+              <div class="grid__info--price">119.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Lichsu_Dialy_Tongiao/LSDLTG_NamBo.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Nam Bộ</div>
+              <div class="grid__info--price">99.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Ngon_tinh/NT_NgoanhLaiDa1Doi.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Ngoảnh lại đã một đời</div>
+              <div class="grid__info--price">139.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Foreign_books/FB_TheLittlePrince.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">The little prince</div>
+              <div class="grid__info--price">199.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Khoahoc_Kythuat/KHKT_GiuAmTrucHan.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Tuyệt chiêu giữ ấm, trục hàn</div>
+              <div class="grid__info--price">169.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Different_books/Kinh_di/KD_LoiTienTriCuoiCung.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Lời tiên tri cuối cùng</div>
+              <div class="grid__info--price">129.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Thieunhi/TN_KhuVuonBiMat.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Khu vườn bí mật</div>
+              <div class="grid__info--price">179.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Thieunhi/TN_ViSaoToYeuMe.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Vì sao tớ yêu mẹ</div>
+              <div class="grid__info--price">119.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Thieunhi/TN_ViSaoToYeuBo.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Vì sao tớ yêu bố</div>
+              <div class="grid__info--price">119.000đ</div>
+            </div>
+          </div>
+          <div class="goiy__product--card">
+            <div class="product__grid--img">
+              <img
+                src="asset/img/Thieunhi/TN_NguoiBanTuongTuong.png"
+                alt="ảnh sản phẩm"
+              />
+            </div>
+            <div class="product__grid--info">
+              <div class="grid__info--name">Người bạn tưởng tượng</div>
+              <div class="grid__info--price">139.000đ</div>
+            </div>
+          </div>
+        </div>
+        <div class="dieuhuong__btn--morewrap">
+          <button class="dieuhuong__btn--more">Xem thêm</button>
+        </div>
+      </div>
+    </main>
+
+    <!--NEWSLETTER-->
+    <div class="newsletter">
+      <span class="newsletter-icon">
+        <img src="asset/icon/footer/email_icon.svg" alt="icon newsletter" />
       </span>
-      <span style="font-weight:700;font-size:15px;color:var(--text);text-transform:uppercase;">Combo Trending</span>
+      <span class="newsletter-label">ĐĂNG KÝ NHẬN BẢN TIN</span>
+      <input
+        class="newsletter-input"
+        type="email"
+        placeholder="Nhập địa chỉ email của bạn"
+      />
+      <button class="newsletter-btn">ĐĂNG KÝ</button>
     </div>
-    <div class="tabs">
-      <div class="tab active">Combo Kinh tế</div>
-      <div class="tab">Combo khách học Ngoại ngữ</div>
-      <div class="tab">Combo Tâm lý – Kỹ năng sống</div>
-      <div class="tab">Combo Văn học</div>
-      <div class="tab">Combo Thiếu nhi</div>
-    </div>
-    <div class="row-wrap" style="position:relative">
-      <div class="prod-row">
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_CheTiengAnh.png" alt="ảnh sản phẩm" />
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__inner--grid">
+          <div>
+            <div class="footer__inner--logo">
+              <img src="asset/icon/header/logo.svg" alt="logo BookGroup8" />
+              <span class="footer-logo-text">BookGroup8</span>
+            </div>
+            <p class="footer__inner--desc">
+              Nền tảng mua sách trực tuyến được phát triển bới sinh viên đại học
+              Kinh tế Quốc dân tham khảo website Fahasa.
+            </p>
+            <div class="footer__inner--social" style="margin-top: 14px">
+              <div class="footer__inner--social-btn">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img
+                    src="asset/icon/footer/facebook_icon.svg"
+                    alt="Facebook"
+                /></a>
+              </div>
+              <div class="footer__inner--social-btn">
+                <a href="https://www.tiktok.com/" target="_blank"
+                  ><img src="asset/icon/footer/tiktok_icon.svg" alt="TikTok"
+                /></a>
+              </div>
+              <div class="footer__inner--social-btn">
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><img
+                    src="asset/icon/footer/instagram_icon.svg"
+                    alt="Instagram"
+                /></a>
+              </div>
+              <div class="footer__inner--social-btn">
+                <a href="https://www.youtube.com/" target="_blank"
+                  ><img src="asset/icon/footer/youtube_icon.svg" alt="YouTube"
+                /></a>
+              </div>
+              <div class="footer__inner--social-btn">
+                <a href="https://twitter.com/" target="_blank"
+                  ><img src="asset/icon/footer/twitter_icon.svg" alt="Twitter"
+                /></a>
+              </div>
+            </div>
           </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
+
+          <div>
+            <div class="footer__inner--col-title">Hỗ trợ</div>
+            <div class="footer__inner--links">
+              <a href="#">Trung tâm trợ giúp</a>
+              <a href="#">Hướng dẫn mua hàng</a>
+              <a href="#">Chính sách đổi trả</a>
+              <a href="#">Chính sách bảo mật</a>
+              <a href="#">Điều khoản sử dụng</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer__inner--col-title">Về chúng tôi</div>
+            <div class="footer__inner--links">
+              <a href="#">Giới thiệu</a>
+              <a href="#">Tuyển dụng</a>
+              <a href="#">Đối tác</a>
+              <a href="#">Liên hệ</a>
+              <a href="#">Blog sách</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer__inner--col-title">Liên hệ</div>
+            <div class="footer__inner--links">
+              <a href="#"
+                ><img src="asset/icon/footer/phone_number_icon.svg" alt="" />
+                0942336482</a
+              >
+              <a href="#"
+                ><img src="asset/icon/footer/email_icon.svg" alt="" />
+                thiennhann0006@gmail.com</a
+              >
+              <a href="#"
+                ><img src="asset/icon/footer/time_icon.svg" alt="" /> T2–T7:
+                8:00 – 22:00</a
+              >
+              <a href="#"
+                ><img src="asset/icon/footer/address_icon.svg" alt="" /> TP. Hà
+                Nội</a
+              >
+            </div>
           </div>
         </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_GiaoTrinhTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-        <div class="prod-card">
-          <div class="prod-card--img">
-            <img src="asset/img/Ngoaingu/NN_TuDienTiengAnh.png" alt="ảnh sản phẩm" />
-          </div>
-          <div class="prod-info">
-            <div class="prod-name">TEXT</div>
-            <div class="prod-price">000.000đ</div>
-          </div>
-        </div>
-      </div>
-      <button class="arrow-btn">›</button>
-    </div>
-    <div class="btn-more-wrap">
-      <button class="btn-more">Xem thêm</button>
-    </div>
-  </div>
- 
-  <!-- ══ GỢI Ý CHO BẠN ══ -->
-  <div class="goiy-wrap">
-    <div class="goiy-head">
-      <span class="star">★</span>
-      <span class="goiy-title">Gợi ý cho bạn</span>
-      <span class="star">★</span>
-    </div>
-    <div class="goiy-grid">
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-      <div class="prod-card">
-        <div class="prod-thumb ph"></div>
-        <div class="prod-info">
-          <div class="prod-name">TEXT</div>
-          <div class="prod-price">000.000đ</div>
-        </div>
-      </div>
-    </div>
-    <div class="btn-more-wrap" style="padding-top:16px;">
-      <button class="btn-more">Xem thêm</button>
-    </div>
-  </div>
- 
-</div><!-- end main -->
- 
-<!-- ══ NEWSLETTER ══ -->
-<div class="newsletter">
-  <span class="newsletter-icon">
-    <img src="" alt="icon newsletter" />
-  </span>
-  <span class="newsletter-label">ĐĂNG KÝ NHẬN BẢN TIN</span>
-  <input class="newsletter-input" type="email" placeholder="Nhập địa chỉ email của bạn"/>
-  <button class="newsletter-btn">ĐĂNG KÝ</button>
-</div>
- 
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo-box"><span class="footer-logo-text">
-          BookGroup8
-        </span></div>
-        <p class="footer-desc">Nền tảng mua sách trực tuyến hàng đầu Việt Nam. Hơn 50.000 đầu sách từ các nhà xuất bản uy tín.</p>
-        <div class="footer-social" style="margin-top:14px;">
-          <div class="social-btn">
-            <a href="https://www.facebook.com/?locale=vi_VN" target="_blank"><img src="asset/icon/footer/facebook_icon.svg" alt="Facebook" /></a>
-          </div>
-          <div></div>
-          <div class="social-btn">
-            <a href="https://www.tiktok.com/" target="_blank"><img src="asset/icon/footer/tiktok_icon.svg" alt="TikTok" /></a>
-          </div>
-          <div class="social-btn">
-            <a href="https://www.instagram.com/" target="_blank"><img src="asset/icon/footer/instagram_icon.svg" alt="Instagram" /></a>
-          </div>
-          <div class="social-btn">
-            <a href="https://www.youtube.com/" target="_blank"><img src="asset/icon/footer/youtube_icon.svg" alt="YouTube" /></a>
-          </div>
-          <div class="social-btn">
-            <a href="https://twitter.com/" target="_blank"><img src="asset/icon/footer/twitter_icon.svg" alt="Twitter" /></a>
+
+        <div class="footer__inner--bottom">
+          <span class="footer__inner--bottom inner__bottom--copy"
+            >© 2026 BookGroup8. Bản quyền thuộc về Nhóm 8.</span
+          >
+          <div style="display: flex; gap: 16px">
+            <a href="#" style="font-size: 12px; color: #aaa"
+              >Chính sách bảo mật</a
+            >
+            <a href="#" style="font-size: 12px; color: #aaa">Điều khoản</a>
+            <a href="#" style="font-size: 12px; color: #aaa">Sitemap</a>
           </div>
         </div>
       </div>
-      <div>
-        <div class="footer-col-title">Hỗ trợ</div>
-        <div class="footer-links">
-          <a href="#">Trung tâm trợ giúp</a>
-          <a href="#">Hướng dẫn mua hàng</a>
-          <a href="#">Chính sách đổi trả</a>
-          <a href="#">Chính sách bảo mật</a>
-          <a href="#">Điều khoản sử dụng</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-col-title">Về chúng tôi</div>
-        <div class="footer-links">
-          <a href="#">Giới thiệu</a>
-          <a href="#">Tuyển dụng</a>
-          <a href="#">Đối tác</a>
-          <a href="#">Liên hệ</a>
-          <a href="#">Blog sách</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-col-title">Liên hệ</div>
-        <div class="footer-links">
-          <a href="#">
-            <img src="asset/icon/footer/phone_number_icon.svg" alt="">
-             0942336482</a>
-          <a href="#">
-            <img src="asset/icon/footer/email_icon.svg" alt="">
-            <span class="__cf_email__" data-cfemail="5b282e2b2b34292f1b393434303c29342e2b63752d35">thiennhann0006@gmail.com</span></a>
-          <a href="#">  
-            <img src="/asset/icon/footer/time_icon.svg" alt="">
-             <span>T2–T7: 8:00 – 22:00</span></a>
-          <a href="#">
-            <img src="asset/icon/footer/address_icon.svg" alt="">
-             TP. Hà Nội</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2026 BookGroup8. Bản quyền thuộc về Nhóm 8, nhóm khác tranh là ăn đòn.</span>
-      <div style="display:flex;gap:16px;">
-        <a href="#" style="font-size:12px;color:#aaa;">Chính sách bảo mật</a>
-        <a href="#" style="font-size:12px;color:#aaa;">Điều khoản</a>
-        <a href="#" style="font-size:12px;color:#aaa;">Sitemap</a>
-      </div>
-    </div>
-  </div>
-</footer>
-    </div>
+    </footer>
   </body>
 </html>
