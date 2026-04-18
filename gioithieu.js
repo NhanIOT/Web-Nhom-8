@@ -136,13 +136,51 @@ function initLoadMore() {
   });
 }
 
+// ==================== Hamburger Menu (Mobile) ====================
+function initHamburger() {
+  const header = document.querySelector(".header");
+  const nav = document.querySelector(".header__nav");
+  if (!header || !nav) return;
+
+  // Tạo nút hamburger và chèn vào header (sau logo)
+  const logo = header.querySelector(".header__logo");
+  const btn = document.createElement("button");
+  btn.className = "hamburger-btn";
+  btn.setAttribute("aria-label", "Mở menu");
+  btn.innerHTML = "&#9776;"; // ☰
+  logo.insertAdjacentElement("afterend", btn);
+
+  // Toggle mở/đóng nav khi click
+  btn.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("nav--open");
+    btn.innerHTML = isOpen ? "&#10005;" : "&#9776;"; // ✕ / ☰
+    btn.setAttribute("aria-label", isOpen ? "Đóng menu" : "Mở menu");
+  });
+
+  // Đóng nav khi click vào một link bên trong
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("nav--open");
+      btn.innerHTML = "&#9776;";
+    });
+  });
+
+  // Đóng nav khi click ra ngoài
+  document.addEventListener("click", (e) => {
+    if (!header.contains(e.target)) {
+      nav.classList.remove("nav--open");
+      btn.innerHTML = "&#9776;";
+    }
+  });
+}
+
 // ==================== Khởi chạy toàn bộ khi DOM sẵn sàng ====================
 document.addEventListener("DOMContentLoaded", () => {
   initMainSlider();
   initFlashSaleTimer();
   initTabs();
   initLoadMore();
+  initHamburger();
 
-  // Xử lý lỗi thường gặp: nếu thiếu ảnh thì không báo lỗi console
   console.log("Đã khởi tạo giao diện thành công!");
 });
