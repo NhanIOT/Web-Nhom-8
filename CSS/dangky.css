@@ -1,0 +1,576 @@
+/* ============================================================
+   DANGKY.CSS — Trang đăng ký BookGroup8
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LAYOUT TỔNG — form trái, ảnh phải
+══════════════════════════════════════════════════════════ */
+.container__signin {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LEFT — FORM ĐĂNG KÝ
+══════════════════════════════════════════════════════════ */
+.container__signin--left {
+  background: #fdf6ee;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 40px 40px;
+  box-shadow: 8px 0 36px rgb(253, 253, 253);
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+}
+
+/* ── Logo ── */
+.signin__left--logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.signin__left--logo .logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.signin__left--logo .logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.signin__left--logo .logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--p-600, #d0021b);
+  letter-spacing: -0.2px;
+}
+
+/* ── Link quay về ── */
+.signin__left--back {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  color: #9e8f82;
+  text-decoration: none;
+  margin-bottom: 14px;
+  transition: color 0.2s;
+}
+
+.signin__left--back:hover {
+  color: var(--p-600, #d0021b);
+}
+
+/* Tiêu đề "Tạo tài khoản" */
+.container__signin--left > h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1008;
+  margin-bottom: 5px;
+}
+
+/* "Đã có tài khoản?" */
+.container__signin--left > p {
+  font-size: 13.5px;
+  color: #9e8f82;
+  margin-bottom: 20px;
+}
+
+.container__signin--left > p a {
+  color: var(--p-600, #d0021b);
+  font-weight: 600;
+}
+
+.container__signin--left > p a:hover {
+  text-decoration: underline;
+}
+
+/* Form tổng */
+.signin__left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ════════════════════════════
+   INPUT GROUPS
+════════════════════════════ */
+
+/* Label dùng chung */
+.signin__left--name label,
+.signin__left--email label,
+.signin__left--password label,
+.signin__left--confirm-password label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #5c3d1e;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+/* Input style dùng chung */
+.signin__left--name input,
+.signin__left--email input,
+.signin__left--password input,
+.signin__left--confirm-password input {
+  width: 100%;
+  height: 42px;
+  padding: 0 44px 0 40px; /* trái: icon, phải: icon mắt */
+  border: 1.5px solid #d8cfc7;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1a1008;
+  background: #fff;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.signin__left--name input::placeholder,
+.signin__left--email input::placeholder,
+.signin__left--password input::placeholder,
+.signin__left--confirm-password input::placeholder {
+  color: #c4b8ad;
+}
+
+.signin__left--name input:focus,
+.signin__left--email input:focus,
+.signin__left--password input:focus,
+.signin__left--confirm-password input:focus {
+  border-color: #8b5e3c;
+  box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.12);
+}
+
+/* ── Họ và Tên — 2 cột ── */
+.signin__left--name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+/* Wrapper con cho mỗi input trong name row */
+.left__name--lastname,
+.left__name--firstname {
+  position: relative; /* bắt buộc cho icon */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Email, Password, Confirm — flex column */
+.signin__left--email {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.signin__left--password {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.signin__left--confirm-password {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Email không có icon mắt → padding phải nhỏ hơn */
+.signin__left--email input {
+  padding-right: 14px;
+}
+
+/* ── Icon dùng chung ── */
+.left__input--icon {
+  position: absolute;
+  bottom: 0; /* căn theo đáy wrapper = trên input */
+  height: 42px; /* khớp chiều cao input */
+  display: flex;
+  align-items: center;
+  pointer-events: none; /* mặc định không click được */
+  z-index: 1;
+}
+
+.left__input--icon img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+/* ── Icon trái — FIX: vị trí theo wrapper ── */
+.input__icon--last {
+  left: 12px;
+} /* icon họ */
+.input__icon--first {
+  left: 12px;
+} /* icon tên */
+.input__icon--email {
+  left: 12px;
+} /* icon email */
+.input__icon--password {
+  left: 12px;
+} /* icon khóa */
+.input__icon--cfpassword {
+  left: 12px;
+} /* icon xác nhận */
+
+/* ── Icon mắt phải — FIX: click được ── */
+.input__icon--showpass,
+.input__icon--showcfpass {
+  right: 12px;
+  left: auto;
+  pointer-events: auto; /* click được để toggle */
+  cursor: pointer;
+  opacity: 1;
+}
+
+.input__icon--showpass img,
+.input__icon--showcfpass img {
+  width: 17px;
+  height: 17px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+.input__icon--showpass:hover img,
+.input__icon--showcfpass:hover img {
+  opacity: 0.8;
+}
+
+/* ── Checkbox điều khoản ── */
+.signin__left--check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.signin__left--check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--p-600, #d0021b);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.signin__left--check label {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.signin__left--check label a {
+  color: var(--p-600, #d0021b);
+  font-weight: 600;
+}
+
+.signin__left--check label a:hover {
+  text-decoration: underline;
+}
+
+/* ── Nút Tạo tài khoản ── */
+.signin__left--finalbtn {
+  width: 100%;
+  padding: 14px;
+  background: var(--p-600, #d0021b);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 20px rgba(208, 2, 27, 0.3);
+  margin-bottom: 14px;
+  transition:
+    background 0.2s,
+    transform 0.15s,
+    box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.signin__left--finalbtn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.signin__left--finalbtn:hover {
+  background: #a80015;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(208, 2, 27, 0.42);
+}
+
+.signin__left--finalbtn:active {
+  transform: translateY(0);
+}
+
+/* ── Divider "Hoặc đăng ký bằng" ── */
+.signin__left--hr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.signin__left--hr::before,
+.signin__left--hr::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #d8cfc7;
+}
+
+.signin__left--hr p {
+  font-size: 12px;
+  color: #9e8f82;
+  white-space: nowrap;
+}
+
+/* ── 2 nút Social ── */
+.signin__left--btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.left__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 1.5px solid #d8cfc7;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #333;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.left__btn:hover {
+  border-color: #bbb;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background: #fafafa;
+}
+
+.left__btn--logo {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.left__btn--logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.left__btn--name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RIGHT — ẢNH NỀN + TEXT
+══════════════════════════════════════════════════════════ */
+.container__signin--right {
+  position: relative;
+  overflow: hidden; /* quan trọng: không dùng auto */
+}
+
+/* Ảnh nền */
+.signin__right--img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.signin__right--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay tối */
+.signin__right--img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+/* Text panel — căn phải + dưới */
+.signin__right--text {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* đẩy xuống dưới */
+  align-items: flex-end; /* căn phải */
+  padding: 52px 60px;
+  gap: 0;
+  text-align: right;
+  right: 100px;
+  bottom: 100px;
+}
+
+/* Tiêu đề lớn */
+.signin__right--text > h1 {
+  font-size: 70px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+}
+
+/* Đoạn mô tả */
+.signin__right--text > p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 28px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Stats hàng ngang ── */
+.signin__right--stats {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-item h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stat-item h1 img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.stat-item h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .container__signin {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ẩn hoàn toàn panel ảnh bên phải */
+  .container__signin--right {
+    display: none;
+  }
+
+  /* Form chiếm toàn màn hình */
+  .container__signin--left {
+    min-height: 100vh;
+    padding: 40px 36px;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container__signin--left {
+    padding: 32px 20px;
+  }
+
+  .container__signin--left > h1 {
+    font-size: 24px;
+  }
+
+  .signin__left--name {
+    grid-template-columns: 1fr; /* Họ và Tên xuống 1 cột */
+    gap: 14px;
+  }
+
+  .signin__left--btn {
+    grid-template-columns: 1fr;
+  }
+}

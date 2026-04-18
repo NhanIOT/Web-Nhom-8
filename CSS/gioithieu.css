@@ -1,0 +1,200 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container__gioithieu--header {
+  padding: 30px 20px;
+  position: sticky;
+  border-left: 4px solid red;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container__gioithieu--banner {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.container__gioithieu--banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== MEMBER SECTION ===== */
+.container__gioithieu--member {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+
+/* Member Left (Ảnh trái - Chữ phải) */
+.container__gioithieu--member-left {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  padding: 10px 30px;
+}
+
+/* Member Right (Chữ trái - Ảnh phải) */
+.container__gioithieu--member-right {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  padding: 10px 30px;
+}
+
+.member__left--nhan,
+.member__left--hiep,
+.member__right--thang,
+.member__right--thao {
+  box-sizing: border-box;
+  box-shadow: 0 0 16px rgb(255, 255, 255);
+  border-radius: 30px;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+}
+
+/* Ảnh thành viên */
+.gioithieu__member--img {
+  flex-shrink: 0;
+  width: 280px;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gioithieu__member--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gioithieu__member--img img:hover {
+  transform: scale(1.05);
+}
+
+/* Thông tin thành viên */
+.gioithieu__member--inf {
+  flex: 1;
+}
+
+/* Trưởng nhóm tag */
+.gioithieu__member--inf > span:first-child {
+  display: inline-block;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.gioithieu__member--inf h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: #1a1a2e;
+}
+
+/* Role tags */
+.member__inf--role {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.inf__role {
+  background: #f0f0f5;
+  color: #555;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Quote/Said text */
+.member__inf--said {
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 4px solid #667eea;
+  font-style: italic;
+  color: #666;
+}
+
+.member__inf--said p {
+  margin: 0;
+}
+
+/* Main description */
+.member__inf--main {
+  margin-bottom: 24px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.member__inf--main p {
+  margin: 0;
+}
+
+/* Skill tags */
+.member__inf--role-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.inf__role-main {
+  background: #1a1a2e;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap !important;
+  display: inline-block !important;
+  transition: all 0.3s ease;
+}
+
+.inf__role-main:hover {
+  background: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Contact icons */
+.member__inf-contact {
+  display: flex;
+  gap: 16px;
+}
+
+.inf__contact--icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.inf__contact--icon:hover {
+  transform: translateY(-3px);
+}
+
+.inf__contact--icon img {
+  width: 22px;
+  height: 22px;
+  transition: filter 0.3s ease;
+}

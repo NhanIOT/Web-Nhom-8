@@ -1,0 +1,135 @@
+.footer {
+  background: var(--foreground-color);
+  border-top: 1px solid var(--gray-100);
+  padding: 32px 0 16px;
+  margin-top: 0;
+}
+
+.footer__inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+/*Grid 4 cột*/
+.footer__inner--grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+/* Cột 1: Logo + mô tả + mạng xã hội*/
+.footer__inner--logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer__inner--logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.footer-logo-text {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--p-600);
+  letter-spacing: -0.3px;
+}
+
+.footer__inner--desc {
+  font-size: 13px;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* Social icons */
+.footer__inner--social {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer__inner--social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  overflow: hidden;
+}
+
+.footer__inner--social-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+  transition: filter 0.2s;
+}
+
+.footer__inner--social-btn:hover {
+  transform: translateY(-2px);
+}
+
+/*Cột 2-4: Links*/
+.footer__inner--col-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gray-900);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 14px;
+}
+
+.footer__inner--links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer__inner--links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-500);
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+
+.footer__inner--links a img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer__inner--links a:hover {
+  color: var(--p-600);
+}
+
+/*Bottom bar*/
+.footer__inner--bottom {
+  border-top: 1px solid var(--gray-100);
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.inner__bottom--copy {
+  font-size: 12.5px;
+  color: var(--gray-400);
+}

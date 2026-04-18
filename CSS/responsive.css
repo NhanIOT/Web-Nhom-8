@@ -1,0 +1,653 @@
+/* ============================================================
+   RESPONSIVE.CSS — Toàn bộ Media Queries cho BookGroup8
+   ============================================================ */
+
+/* Breakpoints:
+   - max-width: 1200px (tablet ngang)
+   - max-width: 992px  (tablet dọc)
+   - max-width: 768px  (mobile lớn)
+   - max-width: 576px  (mobile nhỏ)
+*/
+
+/* ───────────────────────────────────────────────────────────
+   1. MÀN HÌNH ≤ 1200px (Tablet ngang)
+   ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 1200px) {
+  /* Header thu gọn khoảng cách */
+  .header {
+    padding: 10px 20px;
+    gap: 16px;
+  }
+
+  /* Navigation thu nhỏ font */
+  .header__nav ul {
+    gap: 16px;
+  }
+
+  /* Search box linh hoạt */
+  .header__search {
+    min-width: 200px;
+  }
+
+  /* Language selector ẩn bớt */
+  .header__countries select {
+    padding: 4px 6px;
+  }
+
+  /* Container chính giảm padding */
+  .container {
+    padding: 0 12px;
+  }
+
+  /* Flash sale: giảm số lượng hiển thị (vẫn scroll ngang) */
+  .main__flashsale--products {
+    gap: 8px;
+  }
+
+  .flashsale__product--element {
+    flex: 0 0 145px;
+    min-width: 145px;
+  }
+
+  /* Gift card grid 4 -> 3 cột */
+  .giftcard__content--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Bảng xếp hạng: 3 cột điều chỉnh */
+  .seccard__ranking {
+    grid-template-columns: 1fr 200px 260px;
+  }
+
+  .ranking__featured--img {
+    width: 130px;
+    height: 180px;
+  }
+
+  /* Trang giới thiệu: giảm kích thước ảnh */
+  .gioithieu__member--img {
+    width: 240px;
+    height: 360px;
+  }
+
+  .container__gioithieu--member-left,
+  .container__gioithieu--member-right {
+    gap: 30px;
+  }
+
+  /* Trang đăng nhập/đăng ký: điều chỉnh padding text */
+  .login__left--text,
+  .signin__right--text {
+    padding: 40px 40px;
+    left: 40px;
+    bottom: 60px;
+  }
+
+  .login__left--text .left__text--h1 h1,
+  .signin__right--text > h1 {
+    font-size: 56px;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   2. MÀN HÌNH ≤ 992px (Tablet dọc)
+   ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 992px) {
+  /* Header: chuyển navigation xuống dưới? Chưa, nhưng ẩn bớt text */
+  .header__logo span {
+    display: none; /* Chỉ hiện logo */
+  }
+
+  .header__nav ul li a {
+    font-size: 13px;
+  }
+
+  /* Search box chiếm ít không gian hơn */
+  .header__search input {
+    padding: 0 12px;
+  }
+
+  /* Ẩn language selector để tiết kiệm không gian */
+  .header__countries {
+    display: none;
+  }
+
+  /* Hero carousel: điều chỉnh chiều cao */
+  .main__left {
+    aspect-ratio: 16 / 8;
+  }
+
+  /* Main cards grid 4 -> 2 cột */
+  .main__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Thể loại marquee: padding nhỏ hơn */
+  .main__theloai--element {
+    padding: 0 16px;
+  }
+
+  /* Flash sale sản phẩm nhỏ hơn */
+  .flashsale__product--element {
+    flex: 0 0 135px;
+    min-width: 135px;
+  }
+
+  .flashsale__product--element > img {
+    height: 160px;
+  }
+
+  .product__element--sale {
+    top: 135px;
+  }
+
+  /* Danh mục sản phẩm: grid item */
+  .element__grid--item {
+    flex: 0 0 80px;
+  }
+
+  .element__grid--img {
+    width: 64px;
+    height: 80px;
+  }
+
+  /* Gift card: 3 -> 2 cột */
+  .giftcard__content--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Section products grid 6 -> 4 cột */
+  .seccard__products,
+  .main__goiy--grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Bảng xếp hạng: xếp chồng */
+  .seccard__ranking {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .seccard__ranking--list {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .seccard__ranking--featured {
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .ranking__featured--img {
+    width: 120px;
+    height: 160px;
+  }
+
+  .ranking__featured--detail {
+    padding-left: 0;
+  }
+
+  /* Trang giới thiệu: member left/right vẫn giữ layout ngang nhưng ảnh nhỏ hơn */
+  .gioithieu__member--img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .gioithieu__member--inf h1 {
+    font-size: 26px;
+  }
+
+  /* Footer: grid 4 -> 2 cột */
+  .footer__inner--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* Trang đăng nhập/đăng ký: form rộng hơn */
+  .container__login {
+    grid-template-columns: 1fr 380px;
+  }
+
+  .container__signin {
+    grid-template-columns: 380px 1fr;
+  }
+
+  .container__login--right,
+  .container__signin--left {
+    padding: 30px 30px;
+  }
+
+  .login__left--text .left__text--h1 h1,
+  .signin__right--text > h1 {
+    font-size: 48px;
+  }
+
+  .login__left--stats,
+  .signin__right--stats {
+    gap: 30px;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   3. MÀN HÌNH ≤ 768px (Mobile lớn)
+   ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+  /* Header: chuyển sang mobile layout */
+  .header {
+    flex-wrap: wrap;
+    padding: 8px 16px;
+  }
+
+  .header__logo {
+    order: 1;
+  }
+
+  /* Hamburger button sẽ hiển thị (do JS tạo) */
+  .hamburger-btn {
+    display: block;
+    order: 2;
+  }
+
+  .header__nav {
+    order: 3;
+    width: 100%;
+    display: none; /* Sẽ được JS toggle */
+  }
+
+  .header__nav.nav--open {
+    display: block;
+  }
+
+  .header__nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 0;
+  }
+
+  .header__nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .header__search {
+    order: 4;
+    width: 100%;
+    margin-top: 8px;
+    min-width: auto;
+  }
+
+  .header__quan-trong {
+    order: 5;
+    margin-left: auto;
+  }
+
+  /* Hero: 2 cột chuyển thành 1 cột */
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left"
+      "right"
+      "cards"
+      "theloai";
+  }
+
+  .main__right {
+    flex-direction: row;
+  }
+
+  .main__right--box {
+    flex: 1;
+  }
+
+  /* Carousel arrows nhỏ hơn */
+  .main__left--prev,
+  .main__left--next {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  /* Flash sale: sản phẩm nhỏ hơn nữa */
+  .flashsale__product--element {
+    flex: 0 0 125px;
+    min-width: 125px;
+  }
+
+  .flashsale__product--element > img {
+    height: 150px;
+  }
+
+  .product__element--sale {
+    top: 125px;
+  }
+
+  /* Section products: 4 -> 2 cột */
+  .seccard__products,
+  .main__goiy--grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tủ sách nổi bật: card nhỏ hơn */
+  .seccard__product--grid .product__grid--card {
+    flex: 0 0 140px;
+    min-width: 140px;
+  }
+
+  /* Banner giới thiệu */
+  .container__gioithieu--banner {
+    height: 150px;
+  }
+
+  /* Member layout: chuyển thành cột dọc */
+  .container__gioithieu--member-left,
+  .container__gioithieu--member-right {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+  }
+
+  .gioithieu__member--img {
+    width: 220px;
+    height: 320px;
+    margin: 0 auto;
+  }
+
+  .member__inf--role,
+  .member__inf--role-main,
+  .member__inf-contact {
+    justify-content: center;
+  }
+
+  .member__inf--said {
+    border-left: none;
+    border-top: 3px solid #667eea;
+    padding-left: 0;
+    padding-top: 16px;
+  }
+
+  /* Slide thuyết trình: code columns chuyển dọc */
+  .slide__content--code {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Footer: 2 -> 1 cột */
+  .footer__inner--grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer__inner--bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Newsletter: xếp dọc */
+  .newsletter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .newsletter-input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .newsletter-btn {
+    width: auto;
+  }
+
+  /* Trang đăng nhập/đăng ký: ẩn ảnh nền, chỉ hiện form */
+  .container__login {
+    grid-template-columns: 1fr;
+  }
+
+  .container__login--left {
+    display: none;
+  }
+
+  .container__login--right {
+    min-height: 100vh;
+    padding: 40px 24px;
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+
+  .container__signin {
+    grid-template-columns: 1fr;
+  }
+
+  .container__signin--right {
+    display: none;
+  }
+
+  .container__signin--left {
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+
+  /* Form đăng ký: họ tên 1 cột */
+  .signin__left--name {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Social buttons 2 -> 1 cột */
+  .login__right--btn,
+  .signin__left--btn {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   4. MÀN HÌNH ≤ 576px (Mobile nhỏ)
+   ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 576px) {
+  /* Header: các icon và text */
+  .header__quan-trong ul {
+    gap: 12px;
+  }
+
+  .header__quan-trong ul li a {
+    font-size: 10px;
+  }
+
+  .header__quan-trong ul li img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Banner text nhỏ */
+  .banner__text {
+    font-size: 10px;
+  }
+
+  .banner__btn {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  /* Hero carousel: nút điều hướng nhỏ */
+  .main__left--prev,
+  .main__left--next {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .main__left--dots .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .main__left--dots .dot.active {
+    width: 20px;
+  }
+
+  /* Main cards 2 -> 1 cột */
+  .main__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .main__card--element {
+    aspect-ratio: 16 / 5;
+  }
+
+  /* Thể loại marquee: padding nhỏ */
+  .main__theloai--element {
+    padding: 0 12px;
+    min-width: 70px;
+  }
+
+  .main__theloai--element img {
+    width: 52px;
+    height: 52px;
+  }
+
+  /* Flash sale: sản phẩm nhỏ hơn */
+  .flashsale__product--element {
+    flex: 0 0 115px;
+    min-width: 115px;
+  }
+
+  .flashsale__product--element > img {
+    height: 135px;
+  }
+
+  .product__element--sale {
+    top: 112px;
+  }
+
+  .product__element--name {
+    font-size: 11px;
+    padding: 24px 6px 2px;
+  }
+
+  .product__element--price {
+    font-size: 12px;
+  }
+
+  /* Section products: vẫn 2 cột nhưng gap nhỏ */
+  .seccard__products,
+  .main__goiy--grid {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  /* Gift card: 2 -> 1 cột */
+  .giftcard__content--grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tabs: font nhỏ */
+  .tab {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  /* Ranking featured: xếp dọc */
+  .seccard__ranking--featured {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ranking__featured--img {
+    width: 140px;
+    height: 190px;
+  }
+
+  /* Trang giới thiệu: ảnh nhỏ hơn */
+  .gioithieu__member--img {
+    width: 180px;
+    height: 260px;
+  }
+
+  .gioithieu__member--inf h1 {
+    font-size: 22px;
+  }
+
+  .container__gioithieu--header h1 {
+    font-size: 22px;
+  }
+
+  /* Form đăng nhập/đăng ký: padding nhỏ */
+  .container__login--right,
+  .container__signin--left {
+    padding: 30px 16px;
+  }
+
+  .container__login--right > h1,
+  .container__signin--left > h1 {
+    font-size: 24px;
+  }
+
+  /* Stats trong login/signin */
+  .login__left--stats,
+  .signin__right--stats {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item h1 {
+    font-size: 28px;
+  }
+
+  .stat-item h3 {
+    font-size: 14px;
+  }
+
+  /* Newsletter: button full width */
+  .newsletter-btn {
+    width: 100%;
+  }
+
+  /* Footer links */
+  .footer__inner--links a {
+    font-size: 12px;
+  }
+
+  .footer-logo-text {
+    font-size: 18px;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   5. ĐIỀU CHỈNH CHO TRANG GIỚI THIỆU SLIDE (nếu cần)
+   ─────────────────────────────────────────────────────────── */
+@media screen and (max-width: 480px) {
+  .container__gioithieu--member {
+    gap: 40px;
+  }
+
+  .member__inf--role-main .inf__role-main {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  /* Đảm bảo skill tags không xuống dòng trong container */
+  .member__inf--role-main {
+    justify-content: center;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────
+   6. ĐIỀU CHỈNH HAMBURGER MENU (đảm bảo hiển thị)
+   ─────────────────────────────────────────────────────────── */
+/* Các style cho hamburger đã được inject qua JS, 
+   nhưng đảm bảo rằng ở mobile nó luôn hiển thị */
+@media screen and (min-width: 769px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+
+  .header__nav {
+    display: block !important;
+  }
+}
