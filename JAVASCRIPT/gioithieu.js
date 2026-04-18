@@ -174,6 +174,47 @@ function initHamburger() {
   });
 }
 
+function initAccount() {
+  const accLi = document.querySelector(".header__quan-trong li:nth-child(3)");
+  if (!accLi) return;
+
+  const panel = document.createElement("div");
+  panel.className = "dropdown-panel";
+  panel.id = "acc-panel";
+  panel.innerHTML = `
+    <div class="dropdown-panel__head">
+      <div class="acc-avatar"></div>
+      <div><div class="acc-name">Xin chào, Bạn!</div><div class="acc-email">Đăng nhập để mua hàng</div></div>
+    </div>
+    <div class="dropdown-panel__body">
+      <a class="acc-menu-item" href="dangnhap.html"><span></span> Đăng nhập</a>
+      <a class="acc-menu-item" href="dangky.html"><span></span> Đăng ký</a>
+      <hr class="acc-divider"/>
+      <a class="acc-menu-item" href="#"><span></span> Đơn hàng của tôi</a>
+      <a class="acc-menu-item" href="#"><span></span> Sản phẩm yêu thích</a>
+      <a class="acc-menu-item" href="#"><span></span> Cài đặt tài khoản</a>
+      <hr class="acc-divider"/>
+      <a class="acc-menu-item acc-logout" href="#"><span></span> Đăng xuất</a>
+    </div>`;
+  accLi.style.position = "relative";
+  accLi.appendChild(panel);
+
+  accLi.addEventListener("click", (e) => {
+    e.stopPropagation();
+    panel.classList.toggle("open");
+    document.getElementById("cart-panel")?.classList.remove("open");
+    document.getElementById("noti-panel")?.classList.remove("open");
+  });
+  document.addEventListener("click", (e) => {
+    if (!accLi.contains(e.target)) panel.classList.remove("open");
+  });
+  panel.querySelector(".acc-logout")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    panel.classList.remove("open");
+    showToast("Đã đăng xuất");
+  });
+}
+
 // ==================== Khởi chạy toàn bộ khi DOM sẵn sàng ====================
 document.addEventListener("DOMContentLoaded", () => {
   initMainSlider();

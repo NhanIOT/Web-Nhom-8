@@ -715,7 +715,7 @@ function initNotification() {
       .querySelectorAll(".noti-item.unread")
       .forEach((el) => el.classList.remove("unread"));
     badge.style.display = "none";
-    showToast("✓ Đã đánh dấu tất cả đã đọc");
+    showToast("Đã đánh dấu tất cả đã đọc");
   });
   document.addEventListener("click", (e) => {
     if (!notiLi.contains(e.target)) panel.classList.remove("open");

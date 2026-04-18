@@ -41,12 +41,14 @@
    ═══════════════════════════════════════════════════════════ */
 @media screen and (max-width: 768px) {
   /* ── HEADER — mobile layout ── */
+  /* ── HEADER — mobile layout ── */
   .header {
     flex-wrap: wrap;
     padding: 8px 16px;
     gap: 8px;
     align-items: center;
   }
+  /* Hàng 1: Logo | Hamburger | ... | Icons */
   .header__logo {
     order: 1;
     flex-shrink: 0;
@@ -55,6 +57,7 @@
     display: block;
     order: 2;
   }
+  /* Icons đẩy sang phải, cùng hàng với logo */
   .header__quan-trong {
     order: 3;
     margin-left: auto;
@@ -65,6 +68,7 @@
   .header__quan-trong ul li {
     gap: 3px;
   }
+  /* Hiện text nhãn cỡ nhỏ dưới icon */
   .header__quan-trong ul li a {
     display: block;
     font-size: 9px;
@@ -74,11 +78,13 @@
     width: 24px;
     height: 24px;
   }
+  /* Hàng 2: Search bar full width */
   .header__search {
     order: 4;
     width: 100%;
     min-width: auto;
   }
+  /* Hàng 3: Nav (ẩn mặc định, hiện khi hamburger bấm) */
   .header__nav {
     order: 5;
     width: 100%;
@@ -100,52 +106,6 @@
   }
   .header__countries {
     display: none;
-  }
-
-  /* ── LAYOUT LIÊN HỆ — xếp dọc ── */
-  .lienhe__wrapper,
-  .contact__wrapper {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  /* Form chiếm full width */
-  .lienhe__form-wrap,
-  .contact__form-wrap,
-  .lienhe__info,
-  .contact__info {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* Input trong form */
-  .lienhe__form input,
-  .lienhe__form textarea,
-  .contact__form input,
-  .contact__form textarea,
-  .form-lienhe input,
-  .form-lienhe textarea {
-    font-size: 16px; /* tránh zoom trên iOS */
-  }
-
-  /* Bản đồ — full width, chiều cao cố định */
-  .lienhe__map,
-  .contact__map {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .lienhe__map iframe,
-  .contact__map iframe {
-    width: 100%;
-    height: 240px;
-  }
-
-  /* Thông tin liên hệ — xếp 2 cột */
-  .lienhe__info--grid,
-  .contact__info--grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
   }
 
   /* ── NEWSLETTER ── */
