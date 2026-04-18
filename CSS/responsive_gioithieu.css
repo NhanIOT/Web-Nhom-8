@@ -1,0 +1,313 @@
+/* ============================================================
+   RESPONSIVE_GIOITHIEU.CSS — BookGroup8
+   Dùng riêng cho: gioithieu.html
+   (Tự đủ: bao gồm responsive cho header, footer, newsletter)
+   Breakpoints: 992 / 768 / 576 / 480
+   ============================================================ */
+
+/* ═══════════════════════════════════════════════════════════
+   1. MÀN HÌNH ≤ 992px  (Tablet ngang)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 992px) {
+  /* Header */
+  .header__logo span {
+    display: none;
+  }
+  .header__countries {
+    display: none;
+  }
+
+  /* Member cards — thu nhỏ */
+  .container__gioithieu--member-left,
+  .container__gioithieu--member-right {
+    gap: 30px;
+    padding: 10px 20px;
+  }
+  .gioithieu__member--img {
+    width: 220px;
+    height: 330px;
+  }
+  .gioithieu__member--inf h1 {
+    font-size: 28px;
+  }
+  .member__inf--role {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .inf__role {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  .inf__role-main {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  /* Section header */
+  .container__gioithieu--header {
+    font-size: 26px;
+  }
+
+  /* Footer — 2 cột */
+  .footer__inner--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   2. MÀN HÌNH ≤ 768px  (Tablet dọc / Mobile lớn)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+  /* ── HEADER — mobile layout ── */
+  .header {
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    gap: 8px;
+    align-items: center;
+  }
+  /* Hàng 1: Logo | Hamburger | ... | Icons */
+  .header__logo {
+    order: 1;
+    flex-shrink: 0;
+  }
+  .hamburger-btn {
+    display: block;
+    order: 2;
+  }
+  /* Icons đẩy sang phải, cùng hàng với logo */
+  .header__quan-trong {
+    order: 3;
+    margin-left: auto;
+  }
+  .header__quan-trong ul {
+    gap: 16px;
+  }
+  .header__quan-trong ul li {
+    gap: 3px;
+  }
+  /* Hiện text nhãn cỡ nhỏ dưới icon */
+  .header__quan-trong ul li a {
+    display: block;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  .header__quan-trong ul li img {
+    width: 24px;
+    height: 24px;
+  }
+  /* Hàng 2: Search bar full width */
+  .header__search {
+    order: 4;
+    width: 100%;
+    min-width: auto;
+  }
+  /* Hàng 3: Nav (ẩn mặc định, hiện khi hamburger bấm) */
+  .header__nav {
+    order: 5;
+    width: 100%;
+    display: none;
+  }
+  .header__nav.nav--open {
+    display: block;
+  }
+  .header__nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0;
+  }
+  .header__nav ul li a {
+    display: block;
+    padding: 11px 20px;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .header__countries {
+    display: none;
+  }
+
+  /* ── BANNER ── */
+  .container__gioithieu--banner {
+    margin: 20px 0;
+    border-radius: 12px;
+  }
+
+  /* ── SECTION HEADER ── */
+  .container__gioithieu--header {
+    padding: 20px 16px;
+    font-size: 24px;
+    text-align: center;
+    border-left: none;
+    border-bottom: 4px solid red;
+  }
+  .container__gioithieu--header h1 {
+    font-size: 22px;
+  }
+
+  /* ── MEMBER CARDS — chuyển sang dọc ── */
+  .container__gioithieu--member-left,
+  .container__gioithieu--member-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+  /* Đảo lại thứ tự ảnh/text trên mobile cho member-right
+     để ảnh luôn nằm trên, text nằm dưới */
+  .container__gioithieu--member-right {
+    flex-direction: column-reverse;
+  }
+  .gioithieu__member--img {
+    width: 240px;
+    height: 320px;
+    margin: 0 auto;
+  }
+  .gioithieu__member--inf {
+    text-align: center;
+  }
+  .member__inf--role {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .member__inf--said {
+    border-left: none;
+    border-top: 3px solid #667eea;
+    padding-left: 0;
+    padding-top: 12px;
+    margin-top: 8px;
+    text-align: center;
+  }
+  .member__inf--role-main {
+    justify-content: center;
+  }
+  .member__inf-contact {
+    justify-content: center;
+  }
+
+  /* ── CONTAINER GIOITHIEU khoảng cách ── */
+  .container__gioithieu--member {
+    gap: 40px;
+  }
+
+  /* ── FUTURE SECTION ── */
+  .container__future h1 {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  .newsletter-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  .footer__inner--grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer__inner--bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   3. MÀN HÌNH ≤ 576px  (Mobile nhỏ)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 576px) {
+  /* Banner */
+  .banner__text {
+    font-size: 10px;
+  }
+  .banner__btn {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  /* Member cards */
+  .gioithieu__member--img {
+    width: 180px;
+    height: 250px;
+  }
+  .gioithieu__member--inf h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .inf__role {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+  .member__inf--main p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .inf__role-main {
+    font-size: 11px;
+    padding: 5px 10px;
+    white-space: normal;
+    word-break: keep-all;
+  }
+  .inf__contact--icon {
+    width: 36px;
+    height: 36px;
+  }
+  .inf__contact--icon img {
+    width: 18px;
+    height: 18px;
+  }
+  .container__gioithieu--header {
+    padding: 16px 12px;
+  }
+  .container__gioithieu--header h1 {
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .footer-logo-text {
+    font-size: 18px;
+  }
+  .footer__inner--links a {
+    font-size: 12px;
+  }
+  .newsletter-btn {
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   4. MÀN HÌNH ≤ 480px  (Mobile siêu nhỏ)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 480px) {
+  .container__gioithieu--member {
+    gap: 32px;
+  }
+  .member__inf--role-main {
+    gap: 6px;
+  }
+  .gioithieu__member--img {
+    width: 160px;
+    height: 220px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   5. BẢO VỆ DESKTOP — hamburger ẩn, nav luôn hiện
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (min-width: 769px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+  .header__nav {
+    display: block !important;
+  }
+}
