@@ -1,151 +1,148 @@
-// gioithieu.js - Chức năng cho trang giới thiệu
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Sticky header (giống index)
-  initStickyHeader();
+// Xử lý slider chính (main__left)
+function initMainSlider() {
+  const sliderContainer = document.querySelector(".main__left");
+  if (!sliderContainer) return;
 
-  // 2. Dropdown: thông báo, tài khoản, giỏ hàng (tái sử dụng logic từ index)
-  initNotification();
-  initAccount();
-  initCart();
+  const slides = Array.from(
+    sliderContainer.querySelectorAll(".main__left--img"),
+  );
+  const prevBtn = sliderContainer.querySelector(".main__left--prev");
+  const nextBtn = sliderContainer.querySelector(".main__left--next");
+  const dotsContainer = sliderContainer.querySelector(".main__left--dots");
+  if (!slides.length || !prevBtn || !nextBtn || !dotsContainer) return;
 
-  // 3. Active nav link
-  initNavActiveLink();
+  let currentIndex = 0;
+  const totalSlides = slides.length;
 
-  // 4. Có thể thêm hiệu ứng cho slide thuyết trình (nếu có)
-  initMemberAnimation();
-
-  function initStickyHeader() {
-    const banner = document.querySelector(".banner");
-    const header = document.querySelector(".header");
-    if (!banner) return;
-    window.addEventListener(
-      "scroll",
-      () => {
-        const y = window.scrollY;
-        banner.classList.toggle("hidden", y > 60);
-        header?.classList.toggle("scrolled", y > 10);
-      },
-      { passive: true },
-    );
+  // Tạo các dot
+  dotsContainer.innerHTML = "";
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === currentIndex) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
   }
+  const dots = Array.from(dotsContainer.querySelectorAll(".dot"));
 
-  function initNavActiveLink() {
-    const links = document.querySelectorAll(".header__nav a");
-    const page = location.pathname.split("/").pop() || "gioithieu.html";
-    links.forEach((a) => {
-      const href = (a.getAttribute("href") || "").split("/").pop();
-      if (href === page) a.classList.add("nav-active");
+  function updateSlides() {
+    slides.forEach((slide, idx) => {
+      slide.style.display = idx === currentIndex ? "block" : "none";
+    });
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle("active", idx === currentIndex);
     });
   }
 
-  // Dropdown Thông báo (giả lập)
-  function initNotification() {
-    const notiLi = document.querySelector(
-      ".header__quan-trong li:nth-child(1)",
-    );
-    if (!notiLi) return;
-    // Tạo badge
-    const badge = document.createElement("span");
-    badge.className = "cart-badge";
-    badge.textContent = "3";
-    badge.style.display = "flex";
-    notiLi.style.position = "relative";
-    notiLi.appendChild(badge);
-
-    const panel = document.createElement("div");
-    panel.className = "dropdown-panel";
-    panel.id = "noti-panel";
-    panel.innerHTML = `
-      <div class="dropdown-panel__head">
-        <span>Thông báo</span>
-        <button class="dp-mark-all">Đánh dấu tất cả đã đọc</button>
-      </div>
-      <div class="dropdown-panel__body">
-        <div class="noti-item unread">...</div> <!-- Tương tự index -->
-      </div>
-      <div class="dropdown-panel__foot"><a href="#">Xem tất cả</a></div>`;
-    notiLi.appendChild(panel);
-    // Xử lý sự kiện (viết gọn)
-    notiLi.addEventListener("click", (e) => {
-      e.stopPropagation();
-      panel.classList.toggle("open");
-    });
-    document.addEventListener("click", (e) => {
-      if (!notiLi.contains(e.target)) panel.classList.remove("open");
-    });
+  function goToSlide(index) {
+    currentIndex = (index + totalSlides) % totalSlides;
+    updateSlides();
   }
 
-  function initAccount() {
-    const accLi = document.querySelector(".header__quan-trong li:nth-child(3)");
-    if (!accLi) return;
-    const panel = document.createElement("div");
-    panel.className = "dropdown-panel";
-    panel.id = "acc-panel";
-    panel.innerHTML = `
-      <div class="dropdown-panel__head">...</div>
-      <div class="dropdown-panel__body">...</div>`;
-    accLi.style.position = "relative";
-    accLi.appendChild(panel);
-    accLi.addEventListener("click", (e) => {
-      e.stopPropagation();
-      panel.classList.toggle("open");
-    });
-    document.addEventListener("click", (e) => {
-      if (!accLi.contains(e.target)) panel.classList.remove("open");
-    });
-  }
+  prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+  nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
 
-  function initCart() {
-    // Tạm thời có thể tái sử dụng code giỏ hàng từ index (rút gọn)
-    const cartLi = document.querySelector(
-      ".header__quan-trong li:nth-child(2)",
-    );
-    if (!cartLi) return;
-    // Tạo badge giỏ hàng (đọc localStorage)
-    let cart = JSON.parse(localStorage.getItem("bg8_cart") || "[]");
-    const badge = document.createElement("span");
-    badge.className = "cart-badge";
-    cartLi.style.position = "relative";
-    cartLi.appendChild(badge);
-    const updateBadge = () => {
-      const total = cart.reduce((s, c) => s + (c.qty || 1), 0);
-      badge.textContent = total > 99 ? "99+" : String(total);
-      badge.style.display = total > 0 ? "flex" : "none";
-    };
-    updateBadge();
-    // Panel giỏ hàng (tạo nhanh)
-    const panel = document.createElement("div");
-    panel.id = "cart-panel";
-    panel.innerHTML = `...`; // Có thể copy từ index.js
-    document.body.appendChild(panel);
-    cartLi.addEventListener("click", (e) => {
-      e.stopPropagation();
-      panel.classList.toggle("open");
-    });
-  }
+  // Ẩn hết slide trừ slide đầu
+  updateSlides();
 
-  function initMemberAnimation() {
-    // Có thể thêm hiệu ứng fade-in khi scroll
-    const members = document.querySelectorAll(
-      ".container__gioithieu--member-left, .container__gioithieu--member-right",
-    );
-    if (members.length === 0) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
+  // Tự động chuyển sau 5 giây
+  setInterval(() => goToSlide(currentIndex + 1), 5000);
+}
+
+// ==================== Flash Sale Countdown ====================
+function initFlashSaleTimer() {
+  const timerElement = document.querySelector(".flashsale__header--timer");
+  if (!timerElement) return;
+
+  // Đặt thời gian kết thúc sau 2 giờ kể từ lúc load trang (có thể sửa)
+  let endTime = new Date();
+  endTime.setHours(endTime.getHours() + 2);
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = endTime - now;
+    if (diff <= 0) {
+      timerElement.innerHTML = `<span>Kết thúc</span><span>00</span><span class="sep">:</span><span>00</span><span class="sep">:</span><span>00</span>`;
+      return;
+    }
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % 3600000) / 60000);
+    const seconds = Math.floor((diff % 60000) / 1000);
+    timerElement.innerHTML = `<span>Kết thúc trong</span>
+      <span>${hours.toString().padStart(2, "0")}</span><span class="sep">:</span>
+      <span>${minutes.toString().padStart(2, "0")}</span><span class="sep">:</span>
+      <span>${seconds.toString().padStart(2, "0")}</span>`;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
+
+// ==================== Tab Switching (Xu hướng, Sách ngoại ngữ, BXH, Combo) ====================
+function initTabs() {
+  // Xử lý tab "Xu hướng mua sắm"
+  const trendTabs = document.querySelector(".seccard__tabs");
+  if (trendTabs && trendTabs.closest(".main__seccard")) {
+    const tabHeaders = trendTabs.querySelectorAll(".tab");
+    const productContainer = trendTabs
+      .closest(".main__seccard")
+      ?.querySelector(".seccard__products");
+    if (tabHeaders.length && productContainer) {
+      // Lưu nội dung gốc của từng tab (giả lập dữ liệu - thực tế có thể lấy từ dataset hoặc fetch)
+      const tabContents = [
+        Array.from(
+          productContainer.querySelectorAll(".seccard__products--card"),
+        ),
+        // Ở đây bạn có thể định nghĩa nội dung cho tab 2,3. Vì demo nên tạm clone lại
+      ];
+      // Đơn giản: khi click tab, bạn có thể thay đổi nội dung bằng AJAX hoặc hiển thị/ẩn.
+      // Do HTML có sẵn nhiều sản phẩm, ta chỉ làm hiệu ứng active cho demo.
+      tabHeaders.forEach((tab, idx) => {
+        tab.addEventListener("click", () => {
+          tabHeaders.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
+          // Ở đây nên gọi hàm load sản phẩm theo danh mục
+          console.log(`Chuyển sang tab ${idx + 1} - cần load dữ liệu động`);
         });
-      },
-      { threshold: 0.2 },
-    );
-    members.forEach((el) => {
-      el.style.opacity = "0";
-      el.style.transform = "translateY(20px)";
-      el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-      observer.observe(el);
-    });
+      });
+    }
   }
+
+  // Xử lý các tab của "Sách ngoại ngữ" (class tương tự)
+  const allSecCard = document.querySelectorAll(".main__seccard");
+  allSecCard.forEach((sec) => {
+    const tabs = sec.querySelector(".seccard__tabs");
+    if (!tabs) return;
+    const tabItems = tabs.querySelectorAll(".tab");
+    if (!tabItems.length) return;
+    tabItems.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabItems.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        // Tại đây bạn có thể thay đổi nội dung products tương ứng
+      });
+    });
+  });
+}
+
+// ==================== Xem thêm (giả lập load thêm) ====================
+function initLoadMore() {
+  const moreButtons = document.querySelectorAll(".dieuhuong__btn--more");
+  moreButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Chức năng đang được phát triển. Sẽ tải thêm sản phẩm ở đây!");
+      // Thực tế bạn sẽ gọi API và thêm sản phẩm vào container phía trước
+    });
+  });
+}
+
+// ==================== Khởi chạy toàn bộ khi DOM sẵn sàng ====================
+document.addEventListener("DOMContentLoaded", () => {
+  initMainSlider();
+  initFlashSaleTimer();
+  initTabs();
+  initLoadMore();
+
+  // Xử lý lỗi thường gặp: nếu thiếu ảnh thì không báo lỗi console
+  console.log("Đã khởi tạo giao diện thành công!");
 });
