@@ -489,7 +489,7 @@ function initSearch() {
           e.preventDefault();
           input.value = book.name;
           dropdown.style.display = "none";
-          showToast(`🔍 Tìm: "${book.name}"`);
+          showToast(`Tìm: "${book.name}"`);
         });
         dropdown.appendChild(li);
       });
@@ -507,13 +507,13 @@ function initSearch() {
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       dropdown.style.display = "none";
-      if (input.value.trim()) showToast(`🔍 Tìm: "${input.value.trim()}"`);
+      if (input.value.trim()) showToast(`Tìm: "${input.value.trim()}"`);
     }
     if (e.key === "Escape") dropdown.style.display = "none";
   });
   searchBtn?.addEventListener("click", () => {
     dropdown.style.display = "none";
-    if (input.value.trim()) showToast(`🔍 Tìm: "${input.value.trim()}"`);
+    if (input.value.trim()) showToast(`Tìm: "${input.value.trim()}"`);
   });
 }
 

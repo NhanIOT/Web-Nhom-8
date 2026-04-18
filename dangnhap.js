@@ -1,50 +1,86 @@
-/* Toggle hiện/ẩn mật khẩu */
-const toggleBtn = document.getElementById("toggle-pw");
-const pwInput = document.getElementById("password");
+// ==================== dangnhap.js ====================
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Toggle hiện/ẩn mật khẩu (theo đúng id trong HTML) ---
+  const togglePassword = () => {
+    const pwInput = document.getElementById("password");
+    const toggleBtn = document.getElementById("toggle-pw");
+    if (!pwInput || !toggleBtn) return;
 
-toggleBtn.addEventListener("click", () => {
-  const isHidden = pwInput.type === "password";
-  pwInput.type = isHidden ? "text" : "password";
-  toggleBtn.querySelector("img").style.opacity = isHidden ? "0.8" : "0.4";
-});
+    toggleBtn.addEventListener("click", () => {
+      const isHidden = pwInput.type === "password";
+      pwInput.type = isHidden ? "text" : "password";
+      const img = toggleBtn.querySelector("img");
+      if (img) {
+        // Thay đổi opacity hoặc src nếu muốn
+        img.style.opacity = isHidden ? "0.8" : "0.4";
+      }
+    });
+  };
+  togglePassword();
 
-/* Validate + submit */
-document.getElementById("btn-login").addEventListener("click", (e) => {
-  e.preventDefault();
+  // --- Validate và submit ---
+  const loginBtn = document.getElementById("btn-login");
   const emailEl = document.getElementById("email");
-  const email = emailEl.value.trim();
-  const pw = pwInput.value;
-  let ok = true;
+  const pwInput = document.getElementById("password");
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    emailEl.style.borderColor = "#d0021b";
-    emailEl.style.boxShadow = "0 0 0 3px rgba(208,2,27,.12)";
-    emailEl.focus();
-    ok = false;
-  }
-  if (pw.length < 6) {
-    pwInput.style.borderColor = "#d0021b";
-    pwInput.style.boxShadow = "0 0 0 3px rgba(208,2,27,.12)";
-    if (ok) pwInput.focus();
-    ok = false;
-  }
-  if (!ok) return;
+  if (!loginBtn || !emailEl || !pwInput) return;
 
-  const btn = document.getElementById("btn-login");
-  btn.textContent = "Đang đăng nhập...";
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = "Đăng nhập";
-    btn.disabled = false;
-    alert("Đăng nhập thành công!");
-    /* TODO: window.location.href = "index.html"; */
-  }, 1500);
-});
+  loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-/* Xoá lỗi khi gõ lại */
-["email", "password"].forEach((id) => {
-  document.getElementById(id)?.addEventListener("input", function () {
-    this.style.borderColor = "";
-    this.style.boxShadow = "";
+    const email = emailEl.value.trim();
+    const password = pwInput.value;
+    let ok = true;
+
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      emailEl.style.borderColor = "#d0021b";
+      emailEl.style.boxShadow = "0 0 0 3px rgba(208,2,27,.12)";
+      emailEl.focus();
+      ok = false;
+    } else {
+      emailEl.style.borderColor = "";
+      emailEl.style.boxShadow = "";
+    }
+
+    // Validate password (ít nhất 6 ký tự)
+    if (password.length < 6) {
+      pwInput.style.borderColor = "#d0021b";
+      pwInput.style.boxShadow = "0 0 0 3px rgba(208,2,27,.12)";
+      if (ok) pwInput.focus();
+      ok = false;
+    } else {
+      pwInput.style.borderColor = "";
+      pwInput.style.boxShadow = "";
+    }
+
+    if (!ok) return;
+
+    // Giả lập đăng nhập thành công
+    loginBtn.textContent = "Đang đăng nhập...";
+    loginBtn.disabled = true;
+    setTimeout(() => {
+      loginBtn.textContent = "Đăng nhập";
+      loginBtn.disabled = false;
+      alert("Đăng nhập thành công!");
+      // Lưu trạng thái (tuỳ chọn)
+      localStorage.setItem("isLoggedIn", "true");
+      // Chuyển hướng về trang chủ (bỏ comment khi muốn)
+      // window.location.href = "index.html";
+    }, 1500);
   });
+
+  // --- Xoá lỗi khi người dùng gõ lại ---
+  const clearErrorOnInput = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("input", function () {
+        this.style.borderColor = "";
+        this.style.boxShadow = "";
+      });
+    }
+  };
+  clearErrorOnInput("email");
+  clearErrorOnInput("password");
 });
