@@ -1,0 +1,223 @@
+/* ============================================================
+   RESPONSIVE_LIENHE.CSS — BookGroup8
+   Dùng riêng cho: lienhe.html
+   (Tự đủ: header, footer, newsletter + layout form liên hệ)
+   Breakpoints: 992 / 768 / 576
+   ============================================================ */
+
+/* ═══════════════════════════════════════════════════════════
+   1. MÀN HÌNH ≤ 992px  (Tablet ngang)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 992px) {
+  /* Header */
+  .header__logo span {
+    display: none;
+  }
+  .header__countries {
+    display: none;
+  }
+
+  /* Layout liên hệ — thu gọn gap */
+  .lienhe__wrapper,
+  .contact__wrapper {
+    gap: 24px;
+  }
+
+  /* Bản đồ — giảm chiều cao */
+  .lienhe__map iframe,
+  .contact__map iframe {
+    height: 280px;
+  }
+
+  /* Footer — 2 cột */
+  .footer__inner--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   2. MÀN HÌNH ≤ 768px  (Tablet dọc / Mobile lớn)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+  /* ── HEADER — mobile layout ── */
+  .header {
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    gap: 8px;
+    align-items: center;
+  }
+  .header__logo {
+    order: 1;
+    flex-shrink: 0;
+  }
+  .hamburger-btn {
+    display: block;
+    order: 2;
+  }
+  .header__quan-trong {
+    order: 3;
+    margin-left: auto;
+  }
+  .header__quan-trong ul {
+    gap: 16px;
+  }
+  .header__quan-trong ul li {
+    gap: 3px;
+  }
+  .header__quan-trong ul li a {
+    display: block;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  .header__quan-trong ul li img {
+    width: 24px;
+    height: 24px;
+  }
+  .header__search {
+    order: 4;
+    width: 100%;
+    min-width: auto;
+  }
+  .header__nav {
+    order: 5;
+    width: 100%;
+    display: none;
+  }
+  .header__nav.nav--open {
+    display: block;
+  }
+  .header__nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0;
+  }
+  .header__nav ul li a {
+    display: block;
+    padding: 11px 20px;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .header__countries {
+    display: none;
+  }
+
+  /* ── LAYOUT LIÊN HỆ — xếp dọc ── */
+  .lienhe__wrapper,
+  .contact__wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Form chiếm full width */
+  .lienhe__form-wrap,
+  .contact__form-wrap,
+  .lienhe__info,
+  .contact__info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Input trong form */
+  .lienhe__form input,
+  .lienhe__form textarea,
+  .contact__form input,
+  .contact__form textarea,
+  .form-lienhe input,
+  .form-lienhe textarea {
+    font-size: 16px; /* tránh zoom trên iOS */
+  }
+
+  /* Bản đồ — full width, chiều cao cố định */
+  .lienhe__map,
+  .contact__map {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .lienhe__map iframe,
+  .contact__map iframe {
+    width: 100%;
+    height: 240px;
+  }
+
+  /* Thông tin liên hệ — xếp 2 cột */
+  .lienhe__info--grid,
+  .contact__info--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  .newsletter-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  .footer__inner--grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer__inner--bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   3. MÀN HÌNH ≤ 576px  (Mobile nhỏ)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 576px) {
+  .banner__text {
+    font-size: 10px;
+  }
+  .banner__btn {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  .header__quan-trong ul {
+    gap: 12px;
+  }
+
+  /* Thông tin liên hệ — 1 cột */
+  .lienhe__info--grid,
+  .contact__info--grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lienhe__map iframe,
+  .contact__map iframe {
+    height: 200px;
+  }
+
+  /* Footer */
+  .footer-logo-text {
+    font-size: 18px;
+  }
+  .footer__inner--links a {
+    font-size: 12px;
+  }
+  .newsletter-btn {
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   4. BẢO VỆ DESKTOP
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (min-width: 769px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+  .header__nav {
+    display: block !important;
+  }
+}

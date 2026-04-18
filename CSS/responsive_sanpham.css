@@ -1,0 +1,295 @@
+/* ============================================================
+   RESPONSIVE_SANPHAM.CSS — BookGroup8
+   Dùng riêng cho: sanpham.html
+   (Tự đủ: header, footer, newsletter + layout lưới sản phẩm,
+    sidebar lọc, sắp xếp)
+   Breakpoints: 1200 / 992 / 768 / 576
+   ============================================================ */
+
+/* ═══════════════════════════════════════════════════════════
+   1. MÀN HÌNH ≤ 1200px  (Desktop nhỏ)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 10px 20px;
+    gap: 16px;
+  }
+  .container {
+    padding: 0 12px;
+  }
+
+  /* Lưới sản phẩm — 4 cột */
+  .sanpham__grid,
+  .seccard__products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   2. MÀN HÌNH ≤ 992px  (Tablet ngang)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 992px) {
+  /* Header */
+  .header__logo span {
+    display: none;
+  }
+  .header__countries {
+    display: none;
+  }
+
+  /* Layout sản phẩm — thu gọn sidebar */
+  .sanpham__layout {
+    gap: 16px;
+  }
+  .sanpham__filter {
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  /* Lưới sản phẩm — 3 cột */
+  .sanpham__grid,
+  .seccard__products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  /* Footer — 2 cột */
+  .footer__inner--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   3. MÀN HÌNH ≤ 768px  (Tablet dọc / Mobile lớn)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 768px) {
+  /* ── HEADER — mobile layout ── */
+  .header {
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    gap: 8px;
+    align-items: center;
+  }
+  .header__logo {
+    order: 1;
+    flex-shrink: 0;
+  }
+  .hamburger-btn {
+    display: block;
+    order: 2;
+  }
+  .header__quan-trong {
+    order: 3;
+    margin-left: auto;
+  }
+  .header__quan-trong ul {
+    gap: 16px;
+  }
+  .header__quan-trong ul li {
+    gap: 3px;
+  }
+  .header__quan-trong ul li a {
+    display: block;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+  .header__quan-trong ul li img {
+    width: 24px;
+    height: 24px;
+  }
+  .header__search {
+    order: 4;
+    width: 100%;
+    min-width: auto;
+  }
+  .header__nav {
+    order: 5;
+    width: 100%;
+    display: none;
+  }
+  .header__nav.nav--open {
+    display: block;
+  }
+  .header__nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0;
+  }
+  .header__nav ul li a {
+    display: block;
+    padding: 11px 20px;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .header__countries {
+    display: none;
+  }
+
+  /* ── LAYOUT SẢN PHẨM ── */
+  /* Sidebar filter ẩn trên mobile (JS sẽ tạo overlay) */
+  .sanpham__layout {
+    flex-direction: column;
+    gap: 0;
+  }
+  .sanpham__filter {
+    /* Được xử lý bởi JS: position fixed, slide in từ trái */
+    width: 280px;
+  }
+
+  /* Lưới sản phẩm — chiếm full width trên mobile */
+  .sanpham__content,
+  .sanpham__products {
+    width: 100%;
+  }
+
+  /* Lưới — 2 cột */
+  .sanpham__grid,
+  .seccard__products,
+  .main__goiy--grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  /* Thanh toolbar (sort + số kết quả) */
+  .sanpham__toolbar,
+  .sanpham__topbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .sanpham__sort,
+  select[name="sort"],
+  #product-sort {
+    width: 100%;
+  }
+
+  /* Thẻ sản phẩm */
+  .seccard__products--card .product__grid--info,
+  .goiy__product--card .product__grid--info {
+    padding: 8px;
+  }
+  .grid__info--name {
+    font-size: 13px;
+  }
+  .grid__info--price {
+    font-size: 14px;
+  }
+
+  /* Phân trang */
+  .sanpham__pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 16px 12px;
+  }
+  .sanpham__pagination button,
+  .sanpham__pagination a {
+    min-width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  /* Tabs danh mục */
+  .sanpham__tabs,
+  .seccard__tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .sanpham__tabs::-webkit-scrollbar,
+  .seccard__tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .tab {
+    flex-shrink: 0;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+  .newsletter-input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ── FOOTER ── */
+  .footer__inner--grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer__inner--bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   4. MÀN HÌNH ≤ 576px  (Mobile nhỏ)
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (max-width: 576px) {
+  .banner__text {
+    font-size: 10px;
+  }
+  .banner__btn {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+  .header__quan-trong ul {
+    gap: 12px;
+  }
+
+  /* Lưới sản phẩm — vẫn 2 cột, giảm gap */
+  .sanpham__grid,
+  .seccard__products,
+  .main__goiy--grid {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  /* Tab */
+  .tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Footer */
+  .footer-logo-text {
+    font-size: 18px;
+  }
+  .footer__inner--links a {
+    font-size: 12px;
+  }
+  .newsletter-btn {
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   5. BẢO VỆ DESKTOP
+   ═══════════════════════════════════════════════════════════ */
+@media screen and (min-width: 769px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+  .header__nav {
+    display: block !important;
+  }
+  /* Đảm bảo filter sidebar hiện bình thường trên desktop */
+  .sanpham__filter {
+    position: static !important;
+    left: auto !important;
+    height: auto !important;
+    box-shadow: none !important;
+  }
+  .sanpham__filter--overlay {
+    display: none !important;
+  }
+}
